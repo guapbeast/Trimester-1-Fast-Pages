@@ -1,3 +1,11 @@
+---
+toc: true
+layout: post
+description: About the author.
+categories: [markdown]
+title: About Me
+---
+
 # Ŕithwikh Várma
 
 ---
