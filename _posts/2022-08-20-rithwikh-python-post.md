@@ -1,2 +1,1 @@
-print("Hello World");-Python
-Hello World
+print("Hello World")
