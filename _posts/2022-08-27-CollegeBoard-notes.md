@@ -17,6 +17,9 @@ title: CollegeBoard Notes
 
 
 
+![]({{site.baseurl}}/images/purplecomputer.jpeg "https://github.com/fastai/fastpages")
+
+
 # Unit 1: Primitive Types
 
 You’ll learn the fundamentals of Java, a programming language, as well as other foundational concepts for coding.
