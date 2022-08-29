@@ -17,7 +17,7 @@ title: CollegeBoard Notes
 
 
 
-![]({{site.baseurl}}/images/purplecomputer.jpeg "https://github.com/fastai/fastpages")
+![]({{site.baseurl}}/images/collegeboard.png "https://github.com/fastai/fastpages")
 
 
 # Unit 1: Primitive Types
