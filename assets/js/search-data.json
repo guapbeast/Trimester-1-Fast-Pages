@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Calculator",
-            "content": "class Main { public static void main(String[] args) { System.out.println(&quot;Enter two numbers&quot;); int first = 67; int second = 45; System.out.println(first + &quot; &quot; + second); // add two numbers int sum = first + second; System.out.println(&quot;The sum is: &quot; + sum); } } .",
+            "content": "class Main { public static void main(String[] args) { System.out.println(&quot;Enter two numbers&quot;); int first = 67; int second = 45; System.out.println(first + &quot; &quot; + second); // add two numbers int sum = first + second; System.out.println(&quot;The sum is: &quot; + sum); } } . The sum is: 112 .",
             "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/jupyter/2022/08/27/calculator.html",
             "relUrl": "/jupyter/2022/08/27/calculator.html",
             "date": " • Aug 27, 2022"
