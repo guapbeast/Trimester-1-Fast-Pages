@@ -36,7 +36,7 @@
     
         ,"post3": {
             "title": "My First Java Post",
-            "content": "",
+            "content": "String greet = &quot;Hello World!&quot;; System.out.println(greet); System.out.println(&quot;Hello World&quot;); . Hello World! Hello World .",
             "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/jupyter/2022/08/21/java.html",
             "relUrl": "/jupyter/2022/08/21/java.html",
             "date": " • Aug 21, 2022"
