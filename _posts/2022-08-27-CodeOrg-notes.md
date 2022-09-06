@@ -68,6 +68,9 @@ I learned how to use a new void method in order to increase a subclasses' abilit
 
 It's important to comment on code when reviewing it so that clear communication can be established between the author and the reviwer.
 
+<img width="1428" alt="Screen Shot 2022-09-06 at 9 25 36 AM" src="https://user-images.githubusercontent.com/86858869/188687321-10980874-5c97-4d86-bd50-c2844ef25309.png">
+
+
 # Lesson 9: Loops
 
 I learned about using while loops in order to execute a portion of code while the condition is true.
