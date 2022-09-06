@@ -38,9 +38,16 @@ I learned the syntax for calling methods in Java to call methods.
 
 # Lesson 5: One-Way Selection Statements
 
-You’ll explore how real-world interactions can be expressed digitally by organizing behaviors and attributes into classes, and you’ll examine the legal and ethical implications of computer programming.
+I learned how to use if statements in Java to maked decisions based on when a condition is either true or false
 
 # Lesson 6: PainterPlus
 
-You’ll learn techniques and standard algorithms to work with collections of related data, known as data structures.
+I learned how to create a subclass to a superclass in Java. Subclasses have all of the attibutes of the Superclass.
 
+# Lesson 7: Writing Methods
+
+I learned how to use a new void method in order to increase a subclasses' abilities and capabilities. Methods from a subclass cannot be accesssed in a superclass.
+
+# Lesson 8: Code Reviews
+
+It's important to comment on code when reviewing it so that clear communication can be established between the author and the reviwer.
