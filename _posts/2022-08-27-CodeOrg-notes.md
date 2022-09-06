@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: CollegeBoard Notes
+description: Code.org Notes
 categories: [markdown]
-title: CollegeBoard Notes
+title: Code.org Notes
 ---
 
 # Ŕithwikh Várma
