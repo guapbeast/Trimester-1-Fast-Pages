@@ -82,6 +82,8 @@ I learned about using while loops in order to execute a portion of code while th
 
 I learned how to efficiently use boolean statements in order to run portions of code based of of a condition. I also learned more aout the not operator and its uses.
 
+<img width="1428" alt="Screen Shot 2022-09-06 at 9 27 39 AM" src="https://user-images.githubusercontent.com/86858869/188687661-c431b051-05d3-4032-be72-f6849d397730.png">
+
 # Lesson 11: Debugging Strategies
 
 I learned to print information to the console as a debugging tool to identify logic errors in my programs. 
