@@ -54,4 +54,28 @@ It's important to comment on code when reviewing it so that clear communication 
 
 # Lesson 9: Loops
 
-I learned about using while 
+I learned about using while loops in order to execute a portion of code while the condition is true.
+
+# Lesson 10: Two-Way Selection Statements
+
+I learned how to efficiently use boolean statements in order to run portions of code based of of a condition. I also learned more aout the not operator and its uses.
+
+# Lesson 11: Debugging Strategies
+
+I learned to print information to the console as a debugging tool to identify logic errors in my programs. 
+
+# Lesson 12: Decomposition and Design
+
+I learned more about learning pseudocode and using decomposition and top-down design to deconstruct problems into smaller tasks and develop algorithms for tasks.
+
+# Lesson 13: PatternPainter
+
+I learned about the use of special behaviors. I also learned about using algorithms to write methods.
+
+# Lesson 14: BackgroundPainter
+
+I further practiced the use of decomposition and use of subclasses.
+
+# Lesson 15: Open Source Code
+
+I learned about the real-world applications of computer science takeaways.
