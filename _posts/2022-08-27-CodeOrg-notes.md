@@ -51,3 +51,7 @@ I learned how to use a new void method in order to increase a subclasses' abilit
 # Lesson 8: Code Reviews
 
 It's important to comment on code when reviewing it so that clear communication can be established between the author and the reviwer.
+
+# Lesson 9: Loops
+
+I learned about using while 
