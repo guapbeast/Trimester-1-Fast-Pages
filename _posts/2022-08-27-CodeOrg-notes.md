@@ -61,6 +61,8 @@ I learned how to create a subclass to a superclass in Java. Subclasses have all 
 
 I learned how to use a new void method in order to increase a subclasses' abilities and capabilities. Methods from a subclass cannot be accesssed in a superclass.
 
+<img width="1428" alt="Screen Shot 2022-09-06 at 9 23 47 AM" src="https://user-images.githubusercontent.com/86858869/188687190-011211b6-188e-4dbf-b4cd-d74866970d21.png">
+
 
 # Lesson 8: Code Reviews
 
