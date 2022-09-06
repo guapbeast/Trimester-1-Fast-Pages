@@ -75,6 +75,9 @@ It's important to comment on code when reviewing it so that clear communication 
 
 I learned about using while loops in order to execute a portion of code while the condition is true.
 
+<img width="1428" alt="Screen Shot 2022-09-06 at 9 26 20 AM" src="https://user-images.githubusercontent.com/86858869/188687450-8b416006-dba2-4396-a40f-6ed5da0b3cfd.png">
+
+
 # Lesson 10: Two-Way Selection Statements
 
 I learned how to efficiently use boolean statements in order to run portions of code based of of a condition. I also learned more aout the not operator and its uses.
