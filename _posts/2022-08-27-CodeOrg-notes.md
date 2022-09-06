@@ -30,11 +30,11 @@ I learned about actual Java syntax and how certain errors/typos in Java can resu
 
 # Lesson 3: The Neighborhood
 
-You’ll delve into the building blocks of algorithms and focus on using conditional statements to solve problems and control results.
+I learned that classes are blueprints that define the attributes and behaviors that an object can have.
 
 # Lesson 4: Navigating and Painting
 
-You’ll learn about iteration, another building block of algorithms that are for repetition.
+I learned the syntax for calling methods in Java to call methods.
 
 # Lesson 5: One-Way Selection Statements
 
