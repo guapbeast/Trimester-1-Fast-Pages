@@ -48,6 +48,9 @@ I learned the syntax for calling methods in Java to call methods.
 
 I learned how to use if statements in Java to maked decisions based on when a condition is either true or false
 
+<img width="1428" alt="Screen Shot 2022-09-06 at 9 21 52 AM" src="https://user-images.githubusercontent.com/86858869/188686636-fbe44895-7983-4fc3-893d-34548850c80c.png">
+
+
 # Lesson 6: PainterPlus
 
 I learned how to create a subclass to a superclass in Java. Subclasses have all of the attibutes of the Superclass.
