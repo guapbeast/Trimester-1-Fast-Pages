@@ -24,13 +24,18 @@ title: Code.org Notes
 
 I learned about the key characteristics that it takes for success in the field of software engineering.
 
+
 # Lesson 2: Java Lab
 
 I learned about actual Java syntax and how certain errors/typos in Java can result in a program that doesn't work. I also learned about the different types of mistakes that result in syntax errors. 
 
+<img width="1428" alt="Screen Shot 2022-09-06 at 9 18 39 AM" src="https://user-images.githubusercontent.com/86858869/188685887-19c3b5d7-9d70-4065-91e8-10354fe7d56a.png">
+
 # Lesson 3: The Neighborhood
 
 I learned that classes are blueprints that define the attributes and behaviors that an object can have.
+
+<img width="1428" alt="Screen Shot 2022-09-06 at 9 19 22 AM" src="https://user-images.githubusercontent.com/86858869/188686158-0628683d-4b60-4276-8d41-4ff60fe41556.png">
 
 # Lesson 4: Navigating and Painting
 
