@@ -145,9 +145,11 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="n">GradeCalculator</span> <span class="p">{</span>  
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>  
-        
+
         <span class="kt">int</span> <span class="n">percent</span><span class="o">=</span><span class="mi">93</span><span class="p">;</span>  
-          
+
+  <span class="c1">//calculates the grade received in AP Physics based on a percentage score.</span>
+
         <span class="k">if</span><span class="p">(</span><span class="n">percent</span><span class="o">&lt;</span><span class="mi">50</span><span class="p">){</span>  
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sorry, didnt pass"</span><span class="p">);</span>  
         <span class="p">}</span>  
@@ -160,15 +162,18 @@ window.onload = wrap_img;
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You earned a C"</span><span class="p">);</span>  
         <span class="p">}</span>  
 
-        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">percent</span><span class="o">&gt;=</span><span class="mi">70</span> <span class="o">&amp;&amp;</span> <span class="n">percent</span><span class="o">&lt;</span><span class="mi">80</span><span class="p">){</span>  
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">percent</span><span class="o">&gt;=</span><span class="mi">70</span> <span class="o">&amp;&amp;</span> <span class="n">percent</span><span class="o">&lt;</span><span class="mi">85</span><span class="p">){</span>  
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You earned a B"</span><span class="p">);</span>  
         <span class="p">}</span>  
 
-        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">percent</span><span class="o">&gt;=</span><span class="mi">80</span> <span class="o">&amp;&amp;</span> <span class="n">percent</span><span class="o">&lt;</span><span class="mi">90</span><span class="p">){</span>  
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">percent</span><span class="o">&gt;=</span><span class="mi">85</span> <span class="o">&amp;&amp;</span> <span class="n">percent</span><span class="o">&lt;</span><span class="mi">90</span><span class="p">){</span>  
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You earned an A"</span><span class="p">);</span>  
 
         <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">percent</span><span class="o">&gt;=</span><span class="mi">90</span> <span class="o">&amp;&amp;</span> <span class="n">percent</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">){</span>  
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You're the best!"</span><span class="p">);</span>  
+
+        <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">percent</span><span class="o">=</span><span class="mi">100</span><span class="p">){</span>  
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You're too good!"</span><span class="p">);</span>  
 
         <span class="p">}</span><span class="k">else</span><span class="p">{</span>  
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Try again."</span><span class="p">);</span>  
