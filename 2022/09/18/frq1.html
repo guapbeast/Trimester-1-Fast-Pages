@@ -171,39 +171,27 @@ window.onload = wrap_img;
       <span class="p">{</span>
         <span class="s">&quot;   ()&quot;</span><span class="p">,</span>
         <span class="s">&quot;   ))    ((&quot;</span><span class="p">,</span>
-        <span class="s">&quot;  //      \\\\&quot;</span><span class="p">,</span>
-        <span class="s">&quot; | \\\\____// |&quot;</span><span class="p">,</span>
+        <span class="s">&quot;  //\&quot;,</span>
+<span class="s">        &quot;</span> <span class="o">|</span> <span class="err">\\\\</span><span class="n">____</span><span class="c1">// |&quot;,</span>
         <span class="s">&quot;\\~/ ~    ~\\/~~/&quot;</span><span class="p">,</span>
-        <span class="s">&quot; (|    _/o  ~~&quot;</span><span class="p">,</span>
-        <span class="s">&quot;  /  /     ,|&quot;</span><span class="p">,</span>
-        <span class="s">&quot; (~~~)__.-\\ |&quot;</span><span class="p">,</span>
-        <span class="s">&quot;  ``~~    | |&quot;</span><span class="p">,</span>
-        <span class="s">&quot;   |      | |&quot;</span><span class="p">,</span>
-      <span class="p">}</span>
-    <span class="p">};</span>
-  
-    <span class="n">String</span><span class="o">[]</span> <span class="n">tiger</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="s">&quot;                         __,,,,_&quot;</span><span class="p">,</span>
-      <span class="s">&quot;          _ __..-;&#39;&#39;`--/&#39;/ /.&#39;,-`-.&quot;</span><span class="p">,</span>
-      <span class="s">&quot;     /&#39;`\\ \\   |  \\ | \\| // // / -.,/_,&#39;-,&quot;</span><span class="p">,</span>
-      <span class="s">&quot;    /&lt;7&#39; ;  \\ \\  | ; ||/ /| | \\/    |`-/,/-.,_,/&#39;)&quot;</span><span class="p">,</span>
-      <span class="s">&quot;   /  _.-, `,-\\,__|  _-| / \\ \\/|_/  |    &#39;-/.;.\\&#39;&quot;</span><span class="p">,</span>
-      <span class="s">&quot;   `-`  f/ ;      / __/ \\__ `/ |__/ |&quot;</span><span class="p">,</span>
-      <span class="s">&quot;        `-&#39;      |  -| =|\\_  \\  |-&#39; |&quot;</span><span class="p">,</span>
-      <span class="s">&quot;              __/   /_..-&#39; `  ),&#39;  //&quot;</span><span class="p">,</span>
-      <span class="s">&quot;          fL ((__.-&#39;((___..-&#39;&#39; \\__.&#39;&quot;</span><span class="p">,</span>
-  
-    <span class="p">};</span>
-  
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printText</span> <span class="p">()</span> <span class="p">{</span>
-      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">count</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">count</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Now there are &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">count</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; chicken\n&quot;</span><span class="p">);</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
+        <span class="s">&quot;,</span>
+<span class="s">        &quot;</span>  <span class="o">/</span>  <span class="o">/</span>     <span class="p">,</span><span class="o">|</span><span class="s">&quot;,</span>
+<span class="s">        &quot;</span> <span class="p">(</span><span class="o">~~~</span><span class="p">)</span><span class="n">__</span><span class="p">.</span><span class="o">-</span><span class="err">\\</span> <span class="o">|</span><span class="s">&quot;,</span>
+<span class="s">        &quot;</span>  <span class="err">``</span><span class="o">~</span> <span class="o">|</span><span class="s">&quot;,</span>
+<span class="s">        &quot;</span>   <span class="o">|</span>      <span class="o">|</span> <span class="o">|</span><span class="s">&quot;,</span>
+<span class="s">      }</span>
+<span class="s">    };</span>
+<span class="s">  </span>
+<span class="s">  </span>
+<span class="s">    public void printText () {</span>
+<span class="s">      for (int count = 4; count &gt;= 1; count--) {</span>
+<span class="s">        System.out.println(&quot;</span><span class="n">Chicken</span><span class="s">&quot; + (count-1) + &quot;</span> <span class="n">chicken</span><span class="err">\</span><span class="n">n</span><span class="s">&quot;);</span>
+<span class="s">      }</span>
+<span class="s">    }</span>
+<span class="s">  }</span>
 
-  <span class="n">Chickenegg</span> <span class="n">myText</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Chickenegg</span><span class="p">();</span>
-<span class="n">myText</span><span class="p">.</span><span class="na">printText</span><span class="p">();</span>
+<span class="s">  Chickenegg myText = new Chickenegg();</span>
+<span class="s">myText.printText();</span>
 </pre></div>
 
     </div>
