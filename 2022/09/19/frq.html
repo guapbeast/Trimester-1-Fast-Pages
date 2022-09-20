@@ -195,6 +195,7 @@ dayOfYear(3, 1, 2016) returns 61, since 2016 is a leap year.</p>
 
     <span class="kt">int</span> <span class="n">day</span> <span class="o">=</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
 
+    <span class="c1">//subtract one because the calendar doesn&#39;t start at 0</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">firstDay</span> <span class="o">+</span> <span class="n">day</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
