@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "FRQ",
-            "content": "public static int numberOfLeapYears(int year1, int year2) { int count = 1900; for (int y=year1; y&lt;=year2; y++) { if (isLeapYear(y)) { count++; } } return count; } . 1900 is not a leap year. . public static int dayOfWeek(int month, int day, int year) { year = 2022 day = 5 month = 12 int firstDay = firstDayOfYear(year); int day = dayOfYear(month, day, year); return (firstDay + day - 1) % 7; } .",
+            "content": "public static int numberOfLeapYears(int year1, int year2) { int count = 1900; for (int y=year1; y&lt;=year2; y++) { if (isLeapYear(y)) { count++; } } return count; } . The Method &quot;numberOfLeapYears&quot; outputs the number of leap years that there are between a certain set of years. The helper method &quot;isLeapYear(y)&quot; is the main part of this function and returns true given an input of a leap year and false given the input of a non-leap year. . 1900 is not a leap year. . public static int dayOfWeek(int month, int day, int year) { year = 2022 day = 5 month = 12 int firstDay = firstDayOfYear(year); int day = dayOfYear(month, day, year); return (firstDay + day - 1) % 7; } .",
             "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/2022/09/19/frq.html",
             "relUrl": "/2022/09/19/frq.html",
             "date": " • Sep 19, 2022"
