@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -206,12 +206,6 @@ dayOfYear(3, 1, 2016) returns 61, since 2016 is a leap year.</p>
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayOfWeek</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
 
-    <span class="n">year</span> <span class="o">=</span> <span class="mi">2022</span>
-
-    <span class="n">day</span> <span class="o">=</span> <span class="mi">5</span>
-     
-    <span class="n">month</span> <span class="o">=</span> <span class="mi">12</span>
-
     <span class="kt">int</span> <span class="n">firstDay</span> <span class="o">=</span> <span class="n">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
 
     <span class="kt">int</span> <span class="n">day</span> <span class="o">=</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
@@ -227,6 +221,14 @@ dayOfYear(3, 1, 2016) returns 61, since 2016 is a leap year.</p>
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The method firstDayOfYear outputs a value that shows what day of the week a date on the calendar is. Sunday is represented by a value of zero, Monday by one, up until Saturday which is represented by six.</p>
+<p>The methoddayOfYear tells us what day a certain calendar date on. For example, dayOfYear( 7, 6, 2011 ) would return 6 because the 6th of January is the sixth day of the year in 2011.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
