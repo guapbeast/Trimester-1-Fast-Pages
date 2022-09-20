@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "FRQ",
-            "content": "public class Main { public static void main(String[] args) { // year to be checked int year = 1900; boolean leap = false; // if the year is divided by 4 if (year % 4 == 0) { // if the year is century if (year % 100 == 0) { // if year is divided by 400 // then it is a leap year if (year % 400 == 0) leap = true; else leap = false; } // if the year is not century else leap = true; } else leap = false; if (leap) System.out.println(year + &quot; is a leap year.&quot;); else System.out.println(year + &quot; is not a leap year.&quot;); } } . 1900 is not a leap year. .",
+            "content": "public static int numberOfLeapYears(int year1, int year2) { int count = 1900; for (int y=year1; y&lt;=year2; y++) { if (isLeapYear(y)) { count++; } } return count; } . 1900 is not a leap year. . public static int dayOfWeek(int month, int day, int year) { year = 2022 day = 5 month = 12 int firstDay = firstDayOfYear(year); int day = dayOfYear(month, day, year); return (firstDay + day - 1) % 7; } .",
             "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/2022/09/19/frq.html",
             "relUrl": "/2022/09/19/frq.html",
             "date": " • Sep 19, 2022"
