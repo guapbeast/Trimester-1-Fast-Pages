@@ -134,8 +134,8 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DeerTiger</span> <span class="p">{</span>
-    <span class="n">String</span><span class="o">[][]</span> <span class="n">deers</span> <span class="o">=</span> <span class="p">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Chickenegg</span> <span class="p">{</span>
+    <span class="n">String</span><span class="o">[][]</span> <span class="n">chicken</span> <span class="o">=</span> <span class="p">{</span>
       <span class="p">{</span>
         <span class="s">&quot;     __//        &quot;</span><span class="p">,</span>
         <span class="s">&quot;   /.__.\ &quot;</span><span class="p">,</span>
@@ -195,12 +195,12 @@ window.onload = wrap_img;
   
     <span class="p">};</span>
   
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printRhyme</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printText</span> <span class="p">()</span> <span class="p">{</span>
       <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">count</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">count</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Here comes &quot;</span> <span class="o">+</span> <span class="n">count</span> <span class="o">+</span> <span class="s">&quot; deer\n&quot;</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">deers</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Here comes &quot;</span> <span class="o">+</span> <span class="n">count</span> <span class="o">+</span> <span class="s">&quot; chicken\n&quot;</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">chicken</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
           <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">count</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">deers</span><span class="o">[</span><span class="n">j</span><span class="o">][</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot;    &quot;</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">chicken</span><span class="o">[</span><span class="n">j</span><span class="o">][</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot;    &quot;</span><span class="p">);</span>
           <span class="p">}</span>
           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
         <span class="p">}</span>
@@ -210,16 +210,47 @@ window.onload = wrap_img;
           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tiger</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Now there are &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">count</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; deer\n&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Now there are &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">count</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; chicken\n&quot;</span><span class="p">);</span>
       <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">}</span>
 
-  <span class="n">DeerTiger</span> <span class="n">myRhyme</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DeerTiger</span><span class="p">();</span>
-<span class="n">myRhyme</span><span class="p">.</span><span class="na">printRhyme</span><span class="p">();</span>
+  <span class="n">Chickenegg</span> <span class="n">myText</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Chickenegg</span><span class="p">();</span>
+<span class="n">myText</span><span class="p">.</span><span class="na">printText</span><span class="p">();</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        &#34;   /.__.\</span><span class="ansi-black-intense-fg ansi-bold"> &#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        &#34;   \</span><span class="ansi-black-intense-fg ansi-bold"> \/ /                &#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        &#34;   \ \</span><span class="ansi-black-intense-fg ansi-bold">/ /                &#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        &#34;&#39;__/    \</span><span class="ansi-black-intense-fg ansi-bold"> &#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        &#34; \</span><span class="ansi-black-intense-fg ansi-bold">-      )&#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        &#34;  \</span><span class="ansi-black-intense-fg ansi-bold">_____/ &#34;,</span>
+<span class="ansi-red-intense-fg ansi-bold">illegal escape character</span>
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
