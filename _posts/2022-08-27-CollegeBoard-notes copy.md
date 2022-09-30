@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: CollegeBoard Notes
+description: CollegeBoard Notes Units 1 - 7
 categories: [markdown]
-title: CollegeBoard Notes
+title: CollegeBoard Notes Units 1 - 7
 ---
 
 # Ŕithwikh Várma
