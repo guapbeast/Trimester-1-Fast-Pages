@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      3 min read
     
 </span></p>
 
@@ -125,52 +125,6 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">javax.imageio.ImageIO</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.io.File</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.awt.image.BufferedImage</span><span class="p">;</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ImageIOTest</span> <span class="p">{</span>    
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span> <span class="n">String</span><span class="o">[]</span> <span class="n">args</span> <span class="p">){</span>
-       <span class="n">BufferedImage</span> <span class="n">img</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>  <span class="c1">// buffer type </span>
-        <span class="k">try</span> <span class="p">{</span>
-            <span class="c1">// Name of file and directories</span>
-            <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;MonaLisa&quot;</span><span class="p">;</span>
-            <span class="n">String</span> <span class="n">in</span> <span class="o">=</span> <span class="s">&quot;images/&quot;</span><span class="p">;</span>
-            <span class="n">String</span> <span class="n">out</span> <span class="o">=</span> <span class="s">&quot;images/tmp/&quot;</span><span class="p">;</span>
-
-            <span class="c1">// Either use URL or File for reading image using ImageIO</span>
-            <span class="n">File</span> <span class="n">imageFile</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="n">in</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;.png&quot;</span><span class="p">);</span>
-            <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">imageFile</span><span class="p">);</span>  <span class="c1">// set buffer of image data</span>
-
-            <span class="c1">// ImageIO Image write to gif in Java</span>
-            <span class="c1">// Documentation https://docs.oracle.com/javase/tutorial/2d/images/index.html</span>
-            <span class="n">ImageIO</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s">&quot;gif&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="n">out</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">&quot;.gif&quot;</span><span class="p">)</span> <span class="p">);</span>  <span class="c1">// write buffer to gif</span>
-
-        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-              <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
-        <span class="p">}</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Success&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="n">ImageIOTest</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -372,6 +326,34 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original: 0 0x0  images/MonaLisa.png
+Scaled: 0 0x0  images/MonaLisa.png
+ASCII out file create error: java.io.FileNotFoundException: images/tmp/MonaLisa.txt (No such file or directory)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">java.lang.NullPointerException: Cannot invoke &#34;java.awt.image.BufferedImage.getHeight()&#34; because &#34;&lt;local1&gt;&#34; is null</span>
+<span class="ansi-red-intense-fg ansi-bold">	at Pics.convertToAscii(#32:1)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at Pics.main(#32:1)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at .(#33:1)</span></pre>
+</div>
+</div>
+
 </div>
 </div>
 
