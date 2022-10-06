@@ -116,17 +116,14 @@ window.onload = wrap_img;
   const resultContainer = document.getElementById("result");
 
   // prepare fetch options
-  const url = "https://spring.nighthawkcodingsociety.com/api/covid/daily";
+  const url = "https://wft-geo-db.p.rapidapi.com/v1/geo/adminDivisions";
 
   const options = {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'omit', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '9d1b75d842msh20486d8bf8d5c19p1904abjsneb2943a9124c',
+		'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+	}
   };
 
   // fetch the API
