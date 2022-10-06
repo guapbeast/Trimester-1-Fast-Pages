@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      6 min read
     
 </span></p>
 
@@ -125,24 +125,6 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>a) Write the static method numberOfLeapYears, which returns the number of leap years between
-year1 and year2, inclusive.
-In order to calculate this value, a helper method is provided for you.
-• isLeapYear(year) returns true if year is a leap year and false otherwise.
-Complete method numberOfLeapYears below. You must use isLeapYear appropriately to
-receive full credit.
-/** Returns the number of leap years between year1 and year2, inclusive.</p>
-<ul>
-<li>Precondition: 0 &lt;= year1 &lt;= year2
-*/
-public static int numberOfLeapYears(int year1, int year2)</li>
-</ul>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -505,31 +487,6 @@ Scaled: 55625 128x136  images/tmp/MonaLisa.png
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">dayOfWeek</span><span class="p">(</span><span class="kt">int</span> <span class="n">month</span><span class="p">,</span> <span class="kt">int</span> <span class="n">day</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
-
-    <span class="kt">int</span> <span class="n">firstDay</span> <span class="o">=</span> <span class="n">firstDayOfYear</span><span class="p">(</span><span class="n">year</span><span class="p">);</span>
-
-    <span class="kt">int</span> <span class="n">day</span> <span class="o">=</span> <span class="n">dayOfYear</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span><span class="p">);</span>
-
-    <span class="c1">//subtract one because the calendar doesn&#39;t start at 0</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">firstDay</span> <span class="o">+</span> <span class="n">day</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">7</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 </div>
 
 
