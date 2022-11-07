@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "POJO, JPA, API, and FE Notes",
-            "content": "POJO helps to create an entity, which can be converted to a database. The JAVA persistent API, or JPA helps coders to interact with the database; API&#39;s in particular help us to store and share data from a community of users. . . Building out the RESTful API services is the last major backend step necessary to access our data. . Lists are a super class to ArrayList. .",
+            "content": "POJO helps to create an entity, which can be converted to a database. The JAVA persistent API, or JPA helps coders to interact with the database; API&#39;s in particular help us to store and share data from a community of users. . . Building out the RESTful API services is the last major backend step necessary to access our data. . . Lists are a super class to ArrayList. .",
             "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/jupyter/2022/10/03/POJO-Notes.html",
             "relUrl": "/jupyter/2022/10/03/POJO-Notes.html",
             "date": " • Oct 3, 2022"
