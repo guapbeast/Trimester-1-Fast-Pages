@@ -36,7 +36,7 @@
     
         ,"post3": {
             "title": "Objects Notes",
-            "content": "APIs are present across all of the world wide web. APIs are a significant and extremely useful tool to extract lots of data from the internet via APIs. . . APIs and Jupyter are important tools that are used in data and computer science, and used to develop a project. . HttpClients are be used to send requests and retrieveresponses, HttpRequests set up the header and body to API provider, the HttpResponse is returned as a result of sending an HttpRequest, and typically a response body will be received. . . Finally, the response body needs to be formatted as per the needs of the project. .",
+            "content": "A Class is a template for an Object. An Object is an instances of a Class. . . Java is an object-oriented programming language. Everything in Java is associated with classes and objects, along with its attributes and methods. . For example: in real life, a car is an object. The car has attributes, such as weight and color, and methods, such as drive and brake. . .",
             "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/jupyter/2022/10/01/Objects-Notes.html",
             "relUrl": "/jupyter/2022/10/01/Objects-Notes.html",
             "date": " • Oct 1, 2022"
