@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "MC Corrections",
-            "content": "College Board MCQ Corrections. . Question: #25 . The correct answer to this problem would be D, I and II .",
+            "content": "College Board MCQ Corrections. . Question: #25 . The correct answer to this problem would be D, I and II. Choice I shows the reader the height, width, and depth of a box through methods getHeight, getWidth, and getDepth, which allow comparisons to be made in all three dimensions to see if one box can fit inside another box. Choice II is also correct because it gives the user methods smallerHeight, smallerWidth, and smallerDepth notify the reader if one of the boxes are smaller than the other in all three dimensions. .",
             "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/jupyter/2022/11/06/corrections.html",
             "relUrl": "/jupyter/2022/11/06/corrections.html",
             "date": " • Nov 6, 2022"
