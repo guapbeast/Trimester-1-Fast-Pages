@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Unit 5 Writing Classes",
-            "content": "public int scoreGuess (String guess){ int count = 0; //Initializes count at 0 for (int i = 0; i &lt;= secret.length() - guess.length(); i++) { if (secret.substring(i, i + guess.length()). equals(guess)) { count++; } } return count * Math.pow(guess.length(), 2); } . public void addMembers (String[] names, int gradYear) { for (string n : names) { MemberInfo newM = new MemberInfo (n, gradYear, true); memberList.add(newM); } } .",
+            "content": "Java is an object-oriented programming language. . Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object. . The car has attributes, such as weight and color, and methods, such as drive and brake. . Classes are sets of objects which share common characteristics/ behavior and common properties/ attributes. . public int scoreGuess (String guess){ int count = 0; //Initializes count at 0 for (int i = 0; i &lt;= secret.length() - guess.length(); i++) { if (secret.substring(i, i + guess.length()). equals(guess)) { count++; } } return count * Math.pow(guess.length(), 2); } . public void addMembers (String[] names, int gradYear) { for (string n : names) { MemberInfo newM = new MemberInfo (n, gradYear, true); memberList.add(newM); } } .",
             "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/jupyter/2022/10/19/unit5.html",
             "relUrl": "/jupyter/2022/10/19/unit5.html",
             "date": " • Oct 19, 2022"
