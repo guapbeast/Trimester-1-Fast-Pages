@@ -35,7 +35,7 @@
   
     
         ,"post3": {
-            "title": "Unit 3 Boolean Expressions and if Statements",
+            "title": "Unit 4 Iteration Notes",
             "content": "A Boolean expression is a Java expression that returns a Boolean value: true or false . Rather than implementing mathematical operators such as &quot;+&quot; or &quot;-&quot;, comparative or boolean operators such as &quot;==&quot; or &quot;!&quot; can be used. . In Java two if statements could be used if both if statement conditions could be true at the same time. . Java supplies a primitive data type called Boolean, instances of which can take the value true or false only . import java.lang.Math; import java.util.Scanner; public class NumberGuess { private int answer; private int guess; Scanner in = new Scanner(System.in); public NumberGuess() { this.answer = (int) Math.floor(Math.random()*10 + 1); System.out.println(answer); } public void play() { while (answer != guess) { this.getGuess(); } in.close(); } public void getGuess() { System.out.print(&quot;Guess a number 1-10: &quot;); this.guess = in.nextInt(); System.out.println(this.guess); if (this.guess &gt; this.answer) { System.out.println(&quot;too high&quot;); } else if (this.guess &lt; this.answer) { System.out.println(&quot;too low&quot;); } else { System.out.println(&quot;congrats&quot;); } } public static void main(String[] args) { NumberGuess num = new NumberGuess(); num.play(); } } . Second Homework Assignment .",
             "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/jupyter/2022/10/18/unit4.html",
             "relUrl": "/jupyter/2022/10/18/unit4.html",
