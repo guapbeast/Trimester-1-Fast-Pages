@@ -153,9 +153,17 @@ window.onload = wrap_img;
     <span class="kd">public</span> <span class="nf">chooseMethod</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">values</span> <span class="o">=</span> <span class="n">array</span><span class="p">;</span>
     <span class="p">}</span>
+
+
+
+
     <span class="kd">public</span> <span class="kt">int</span><span class="o">[]</span> <span class="nf">getArray</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">values</span><span class="p">;</span>
     <span class="p">}</span>
+
+
+
+
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getString</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">values</span><span class="p">);</span>
     <span class="p">}</span>
@@ -167,14 +175,14 @@ window.onload = wrap_img;
 
 <span class="c1">// The line of code below replaces even values</span>
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">replaceEven</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">replacement</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
                 <span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
-    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">increasingOrder</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">incrementation</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">values</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
                 <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
@@ -184,14 +192,21 @@ window.onload = wrap_img;
         <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">chooseMethod</span> <span class="n">method</span> <span class="o">=</span> <span class="k">new</span> <span class="n">chooseMethod</span><span class="p">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">});</span>
+        <span class="n">chooseMethod</span> <span class="n">method</span> <span class="o">=</span> <span class="k">new</span> <span class="n">chooseMethod</span><span class="p">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">123</span><span class="p">,</span><span class="mi">698</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="mi">68</span><span class="p">,</span><span class="mi">1</span><span class="p">});</span>
+        
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">method</span><span class="p">.</span><span class="na">getString</span><span class="p">());</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">method</span><span class="p">.</span><span class="na">increasingOrder</span><span class="p">());</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">method</span><span class="p">.</span><span class="na">incrementation</span><span class="p">());</span>
+
         <span class="n">method</span><span class="p">.</span><span class="na">swap</span><span class="p">();</span>
+
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">method</span><span class="p">.</span><span class="na">getString</span><span class="p">());</span>
-        <span class="n">method</span><span class="p">.</span><span class="na">replaceEven</span><span class="p">();</span>
+
+        <span class="n">method</span><span class="p">.</span><span class="na">replacement</span><span class="p">();</span>
+
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">method</span><span class="p">.</span><span class="na">getString</span><span class="p">());</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">method</span><span class="p">.</span><span class="na">increasingOrder</span><span class="p">());</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">method</span><span class="p">.</span><span class="na">incrementation</span><span class="p">());</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">chooseMethod</span><span class="p">.</span><span class="na">main</span><span class="p">();</span>
@@ -207,10 +222,10 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[1, 2, 3, 4, 5]
+<pre>[1, 6, 12, 8, 8, 9, 34, 5, 123, 698, 43, 68, 1]
 true
-[5, 2, 3, 4, 1]
-[5, 0, 3, 0, 1]
+[1, 6, 12, 8, 8, 9, 34, 5, 123, 698, 43, 68, 1]
+[1, 0, 0, 0, 0, 9, 0, 5, 123, 0, 43, 0, 1]
 false
 </pre>
 </div>
