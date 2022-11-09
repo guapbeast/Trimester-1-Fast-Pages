@@ -37,9 +37,9 @@
         ,"post3": {
             "title": "Unit 3 Boolean Expressions and if Statements",
             "content": "public int getChargeStartTime (int chargeTime) { int startHour = 0; int lowPrice = 500_000; for (int x = 0; x &lt; 23; x++) { if (lowPrice &gt; getChargingCost(x, chargeTime)) { lowPrice = getChargingCost(x, chargeTime); startHour = x; } } return startHour; } . public boolean isStrictlyIncreasing () { boolean increasing = true; for (int i = 1; i &lt; digitListSize(); i++) { if (digitList.get(i-1) &gt;= digitList.get(i)) { increasing = false; } } return increasing; } . public boolean isBalanced(ArrayList&lt;String&gt; delimiters) { int numOpen = 0, numClosed = 0; for(String d : delimiters) { if(d.equals(openDel)) numOpen++; if(d.equals(closeDel)) numClosed++; if(numClosed &gt; numOpen) return false; } return numOpen == numClosed; } .",
-            "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/jupyter/2022/10/15/unit3.html",
-            "relUrl": "/jupyter/2022/10/15/unit3.html",
-            "date": " • Oct 15, 2022"
+            "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/jupyter/2022/10/18/unit4.html",
+            "relUrl": "/jupyter/2022/10/18/unit4.html",
+            "date": " • Oct 18, 2022"
         }
         
     
@@ -79,8 +79,8 @@
   
     
         ,"post7": {
-            "title": "Unit 1 Primitive Types",
-            "content": "public double purchasePrice () { return getListPrice() * (1 + taxRate); } . public int compareCustomer (Customer other) { int compare = getName().compareTo(other.getName()); if (compare == 0) { compare = getID() - other.getID(); } return compare } . | return compare &#39;;&#39; expected .",
+            "title": "Unit 4 Iteration",
+            "content": "import java.lang.Math; import java.util.Scanner; public class NumberGuess { private int answer; private int guess; Scanner in = new Scanner(System.in); public NumberGuess() { this.answer = (int) Math.floor(Math.random()*10 + 1); System.out.println(answer); } public void play() { while (answer != guess) { this.getGuess(); } in.close(); } public void getGuess() { System.out.print(&quot;Guess a number 1-10: &quot;); this.guess = in.nextInt(); System.out.println(this.guess); if (this.guess &gt; this.answer) { System.out.println(&quot;too high&quot;); } else if (this.guess &lt; this.answer) { System.out.println(&quot;too low&quot;); } else { System.out.println(&quot;congrats&quot;); } } public static void main(String[] args) { NumberGuess num = new NumberGuess(); num.play(); } } . Second Quiz .",
             "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/jupyter/2022/10/04/unit1.html",
             "relUrl": "/jupyter/2022/10/04/unit1.html",
             "date": " • Oct 4, 2022"
