@@ -218,6 +218,111 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Compund Boolean Expression: Combinations of Boolean operators result in the creation of compund boolean operators, which include the &amp;&amp;, ||, or ! operators. (And, Or, Not, respectively)</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">boolean</span> <span class="n">IsDecember</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">IsNovember</span><span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+
+<span class="kt">boolean</span> <span class="n">compound</span> <span class="o">=</span> <span class="o">!</span><span class="p">(</span><span class="n">IsDecember</span> <span class="o">&amp;&amp;</span> <span class="n">IsNovember</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">IsNovember</span> <span class="o">||</span> <span class="n">IsDecember</span><span class="p">);</span>
+
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">compound</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>DeMorgan's Law: Helps with the simplification and abstraction of boolean expressions.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">boolean</span> <span class="n">first</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">second</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+
+<span class="c1">// complicated boolean expression</span>
+<span class="kt">boolean</span> <span class="n">res1</span> <span class="o">=</span> <span class="o">!</span><span class="p">((</span><span class="o">!</span><span class="p">(</span><span class="n">first</span> <span class="o">&amp;&amp;</span> <span class="n">second</span><span class="p">))</span> <span class="o">||</span> <span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">first</span> <span class="o">||</span> <span class="n">second</span><span class="p">)));</span>
+
+<span class="c1">// simplified using De Morgan's Law once</span>
+<span class="kt">boolean</span> <span class="n">res2</span> <span class="o">=</span> <span class="o">!</span><span class="p">((</span><span class="o">!</span><span class="n">first</span> <span class="o">||</span> <span class="o">!</span><span class="n">second</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="o">!</span><span class="n">first</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">second</span><span class="p">));</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">res1</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">res2</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>false false 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Truth Tables: Reveal the actual values ot boolean expressions, 0 is false, 1 is true</p>
+<p>0 | 0 | 1 |
+1 | 0 | 1 |</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
@@ -254,7 +359,14 @@ window.onload = wrap_img;
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/guapbeast" target="_blank" title="guapbeast"><svg class="svg-icon grey"><use xlink:href="/Trimester-1-Fast-Pages/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Trimester-1-Fast-Pages/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/guapbeast" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Trimester-1-Fast-Pages/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+</ul>
 </div>
 
   </div>
