@@ -123,7 +123,7 @@
   
     
         ,"post11": {
-            "title": "Unit 4 Iteration",
+            "title": "Unit 1 primitives",
             "content": "import java.lang.Math; import java.util.Scanner; public class NumberGuess { private int answer; private int guess; Scanner in = new Scanner(System.in); public NumberGuess() { this.answer = (int) Math.floor(Math.random()*10 + 1); System.out.println(answer); } public void play() { while (answer != guess) { this.getGuess(); } in.close(); } public void getGuess() { System.out.print(&quot;Guess a number 1-10: &quot;); this.guess = in.nextInt(); System.out.println(this.guess); if (this.guess &gt; this.answer) { System.out.println(&quot;too high&quot;); } else if (this.guess &lt; this.answer) { System.out.println(&quot;too low&quot;); } else { System.out.println(&quot;congrats&quot;); } } public static void main(String[] args) { NumberGuess num = new NumberGuess(); num.play(); } } . Second Quiz . Casting, specifically for Division Casting, specifically for Truncating or Rounding Wrapper Classes, why wrap int, double. Show examples Concatenation, explain or illustrate rules on mixed type Concatenation Math class, specifically Random usage Compound Boolean Expression .",
             "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/jupyter/2022/10/04/unit1.html",
             "relUrl": "/jupyter/2022/10/04/unit1.html",
