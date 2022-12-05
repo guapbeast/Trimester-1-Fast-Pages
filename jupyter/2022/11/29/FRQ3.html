@@ -291,11 +291,11 @@ window.onload = wrap_img;
                         <span class="c1">// Push the new operator on the stack</span>
                         <span class="n">tokenStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
                         <span class="k">break</span><span class="p">;</span>
-                    <span class="k">case</span> <span class="s">"pi"</span><span class="p">:</span>
-                    <span class="k">case</span> <span class="s">"PI"</span><span class="p">:</span>
-                    <span class="k">case</span> <span class="s">"Pi"</span><span class="p">:</span>
+                    <span class="k">case</span> <span class="s">"kg"</span><span class="p">:</span>
+                    <span class="k">case</span> <span class="s">"KG"</span><span class="p">:</span>
+                    <span class="k">case</span> <span class="s">"Kg"</span><span class="p">:</span>
                         <span class="c1">// recognize pi variable and replace that token with it</span>
-                        <span class="k">this</span><span class="p">.</span><span class="na">reverse_polish</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"3.141592653589793238"</span><span class="p">);</span>
+                        <span class="k">this</span><span class="p">.</span><span class="na">reverse_polish</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"2.2"</span><span class="p">);</span>
                         <span class="k">break</span><span class="p">;</span>
                     <span class="k">case</span> <span class="s">"cm"</span><span class="p">:</span>
                     <span class="k">case</span> <span class="s">"Cm"</span><span class="p">:</span>
@@ -441,7 +441,7 @@ window.onload = wrap_img;
 <span class="n">result</span> <span class="o">=</span> <span class="n">gg</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
 <span class="c1">// USING pi value - should print pi value</span>
-<span class="n">Operator</span> <span class="n">hh</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"pi * 1"</span><span class="p">);</span>
+<span class="n">Operator</span> <span class="n">hh</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"kg * 1"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">hh</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
 
@@ -478,8 +478,8 @@ Tokens: [3, +, 2, RT, 25] , RPN: [3, 2, 25, RT, +]
 Result: 2 RT ( 3 + 6 ) = 3.0
 Tokens: [2, RT, (, 3, +, 6, )] , RPN: [2, 3, 6, +, RT]
 
-Result: pi * 1 = 3.141592653589793
-Tokens: [pi, *, 1] , RPN: [3.141592653589793238, 1, *]
+Result: kg * 1 = 2.2
+Tokens: [kg, *, 1] , RPN: [2.2, 1, *]
 
 Result: cm * 1 = 2.54
 Tokens: [cm, *, 1] , RPN: [2.54, 1, *]
