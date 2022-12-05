@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -291,9 +291,9 @@ window.onload = wrap_img;
                         <span class="c1">// Push the new operator on the stack</span>
                         <span class="n">tokenStack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
                         <span class="k">break</span><span class="p">;</span>
-                    <span class="k">case</span> <span class="s">"kg"</span><span class="p">:</span>
-                    <span class="k">case</span> <span class="s">"KG"</span><span class="p">:</span>
-                    <span class="k">case</span> <span class="s">"Kg"</span><span class="p">:</span>
+                    <span class="k">case</span> <span class="s">"lbs"</span><span class="p">:</span>
+                    <span class="k">case</span> <span class="s">"LBS"</span><span class="p">:</span>
+                    <span class="k">case</span> <span class="s">"Lbs"</span><span class="p">:</span>
                         <span class="c1">// recognize pi variable and replace that token with it</span>
                         <span class="k">this</span><span class="p">.</span><span class="na">reverse_polish</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"2.2"</span><span class="p">);</span>
                         <span class="k">break</span><span class="p">;</span>
@@ -439,12 +439,17 @@ window.onload = wrap_img;
 <span class="n">Operator</span> <span class="n">gg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"2 RT ( 3 + 6 +16 )"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">gg</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
-<span class="c1">// USING pi value - should print pi value</span>
-<span class="n">Operator</span> <span class="n">hh</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"kg * 1"</span><span class="p">);</span>
+
+<span class="n">Operator</span> <span class="n">hh</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"lbs * 1"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">hh</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
+<span class="n">Operator</span> <span class="n">hh</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"lbs * 60"</span><span class="p">);</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">hh</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
 <span class="n">Operator</span> <span class="n">ii</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"cm * 2"</span><span class="p">);</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">ii</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="n">Operator</span> <span class="n">ii</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"cm * 1"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">ii</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 </pre></div>
 
@@ -477,11 +482,17 @@ Tokens: [3, +, 7, RT, 100] , RPN: [3, 7, 100, RT, +]
 Result: 2 RT ( 3 + 6 +16 ) = 5.0
 Tokens: [2, RT, (, 3, +, 6, +, 16, )] , RPN: [2, 3, 6, +, 16, +, RT]
 
-Result: kg * 1 = 2.2
-Tokens: [kg, *, 1] , RPN: [2.2, 1, *]
+Result: lbs * 1 = 2.2
+Tokens: [lbs, *, 1] , RPN: [2.2, 1, *]
+
+Result: lbs * 60 = 132.0
+Tokens: [lbs, *, 60] , RPN: [2.2, 60, *]
 
 Result: cm * 2 = 5.08
 Tokens: [cm, *, 2] , RPN: [2.54, 2, *]
+
+Result: cm * 1 = 2.54
+Tokens: [cm, *, 1] , RPN: [2.54, 1, *]
 </pre>
 </div>
 </div>
