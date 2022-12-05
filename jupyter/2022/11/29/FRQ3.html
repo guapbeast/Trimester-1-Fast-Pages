@@ -152,19 +152,19 @@ window.onload = wrap_img;
 <span class="kn">import</span> <span class="nn">java.lang.Math</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">java.lang.Double</span><span class="p">;</span>
 
-    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculator</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Operator</span> <span class="p">{</span>
         <span class="c1">// Key instance variables</span>
         <span class="kd">private</span> <span class="n">String</span> <span class="n">expression</span><span class="p">;</span>
+        <span class="kd">private</span> <span class="n">Double</span> <span class="n">result</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
         <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">tokens</span><span class="p">;</span>
         <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">reverse_polish</span><span class="p">;</span>
-        <span class="kd">private</span> <span class="n">Double</span> <span class="n">result</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
     
         <span class="c1">// Helper definition for supported operators</span>
         <span class="kd">private</span> <span class="kd">final</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">OPERATORS</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
         <span class="p">{</span>
             <span class="c1">// Map&lt;"token", precedence&gt;</span>
-            <span class="n">OPERATORS</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"RT"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-            <span class="n">OPERATORS</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"POW"</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+            <span class="n">OPERATORS</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"POW"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="n">OPERATORS</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"RT"</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
             <span class="n">OPERATORS</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"^"</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
             <span class="n">OPERATORS</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"*"</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
             <span class="n">OPERATORS</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"/"</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
@@ -183,7 +183,7 @@ window.onload = wrap_img;
         <span class="p">}</span>
     
         <span class="c1">// Create a 1 argument constructor expecting a mathematical expression</span>
-        <span class="kd">public</span> <span class="nf">Calculator</span><span class="p">(</span><span class="n">String</span> <span class="n">expression</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">public</span> <span class="nf">Operator</span><span class="p">(</span><span class="n">String</span> <span class="n">expression</span><span class="p">)</span> <span class="p">{</span>
             <span class="c1">// original input</span>
             <span class="k">this</span><span class="p">.</span><span class="na">expression</span> <span class="o">=</span> <span class="n">expression</span><span class="p">;</span>
     
@@ -412,42 +412,42 @@ window.onload = wrap_img;
 <span class="n">String</span> <span class="n">result</span> <span class="o">=</span> <span class="s">" "</span><span class="p">;</span>
 
 <span class="c1">// Should print 8</span>
-<span class="n">Calculator</span> <span class="n">aa</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">"2 * 2 + 4"</span><span class="p">);</span>
+<span class="n">Operator</span> <span class="n">aa</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"2 * 2 + 4"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">aa</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
 <span class="c1">// Commented out to allow ipynb to print everything necessary</span>
-<span class="c1">// Calculator bb = new Calculator("2 * ( 2 + 4 )");</span>
+<span class="c1">// Operator bb = new Operator("2 * ( 2 + 4 )");</span>
 <span class="c1">// result = bb.calcToString(true);</span>
 
 <span class="c1">// Should print 2.</span>
-<span class="n">Calculator</span> <span class="n">cc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">"( 2 + 4 ) / 3"</span><span class="p">);</span>
+<span class="n">Operator</span> <span class="n">cc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"( 2 + 4 ) / 3"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">cc</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
 <span class="c1">// Should print 14</span>
-<span class="n">Calculator</span> <span class="n">dd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">"10 % 4 * 7"</span><span class="p">);</span>
+<span class="n">Operator</span> <span class="n">dd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"10 % 4 * 7"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">dd</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
 <span class="c1">// USING EXPONENTS - Should print 28</span>
-<span class="n">Calculator</span> <span class="n">ee</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">"3 + 5 ^ 2"</span><span class="p">);</span>
+<span class="n">Operator</span> <span class="n">ee</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"3 + 5 ^ 2"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">ee</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
 <span class="c1">// USING ROOT FUNCTION - Should print 8</span>
-<span class="n">Calculator</span> <span class="n">ff</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">"3 + 2 RT 25"</span><span class="p">);</span>
+<span class="n">Operator</span> <span class="n">ff</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"3 + 2 RT 25"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">ff</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
 <span class="c1">// USING ROOT FUNCTION WITH PARENTHESES - Should print 3</span>
-<span class="n">Calculator</span> <span class="n">gg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">"2 RT ( 3 + 6 )"</span><span class="p">);</span>
+<span class="n">Operator</span> <span class="n">gg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"2 RT ( 3 + 6 )"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">gg</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
 <span class="c1">// USING pi value - should print pi value</span>
-<span class="n">Calculator</span> <span class="n">hh</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">"pi * 1"</span><span class="p">);</span>
+<span class="n">Operator</span> <span class="n">hh</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"pi * 1"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">hh</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
 <span class="c1">// USING G VALUE - should print 9.8</span>
-<span class="n">Calculator</span> <span class="n">ii</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">"g * 1"</span><span class="p">);</span>
+<span class="n">Operator</span> <span class="n">ii</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"g * 1"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">ii</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 
-<span class="n">Calculator</span> <span class="n">errorTest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">"m * 1"</span><span class="p">);</span>
+<span class="n">Operator</span> <span class="n">errorTest</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Operator</span><span class="p">(</span><span class="s">"m * 1"</span><span class="p">);</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">errorTest</span><span class="p">.</span><span class="na">calcToString</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
 </pre></div>
 
