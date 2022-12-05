@@ -152,20 +152,17 @@ window.onload = wrap_img;
 <span class="kn">import</span> <span class="nn">java.lang.Math</span><span class="p">;</span>
 <span class="kn">import</span> <span class="nn">java.lang.Double</span><span class="p">;</span>
 
-<span class="cm">/* Calculation function with operators</span>
-<span class="cm"> </span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">calculation</span> <span class="p">{</span>
-       
-        <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">reverse_polish</span><span class="p">;</span>
-        <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">tokens</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculator</span> <span class="p">{</span>
+        <span class="c1">// Key instance variables</span>
         <span class="kd">private</span> <span class="n">String</span> <span class="n">expression</span><span class="p">;</span>
+        <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">tokens</span><span class="p">;</span>
+        <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">reverse_polish</span><span class="p">;</span>
         <span class="kd">private</span> <span class="n">Double</span> <span class="n">result</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
     
         <span class="c1">// Helper definition for supported operators</span>
         <span class="kd">private</span> <span class="kd">final</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">OPERATORS</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
         <span class="p">{</span>
-     
+            <span class="c1">// Map&lt;"token", precedence&gt;</span>
             <span class="n">OPERATORS</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"RT"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
             <span class="n">OPERATORS</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"POW"</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
             <span class="n">OPERATORS</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">"^"</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
