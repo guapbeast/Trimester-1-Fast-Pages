@@ -319,6 +319,8 @@ Best player: Kylian Mbappe
     <span class="p">}</span>
  <span class="p">}</span>
 
+<span class="c1">// The public class teacher is a subclass of person and as such will extend person, the superclass.</span>
+
  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Teacher</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
       <span class="kd">private</span> <span class="n">String</span> <span class="n">subject</span><span class="p">;</span>
       <span class="kd">private</span> <span class="kt">int</span> <span class="n">tenureYears</span><span class="p">;</span>
@@ -352,12 +354,12 @@ Best player: Kylian Mbappe
       <span class="p">}</span>
  <span class="p">}</span>
 
-<span class="n">Person</span> <span class="n">john</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">"John"</span><span class="p">,</span> <span class="s">"1990"</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">john</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="n">Person</span> <span class="n">jamie</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Student</span><span class="p">(</span><span class="s">"Jamie"</span><span class="p">,</span> <span class="s">"2005"</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="s">"football"</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">jamie</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<span class="n">Person</span> <span class="n">jessica</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Teacher</span><span class="p">(</span><span class="s">"Jessica"</span><span class="p">,</span> <span class="s">"1980"</span><span class="p">,</span> <span class="s">"math"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">"PhD in Applied Math"</span><span class="p">);</span>
-<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">jessica</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="n">Person</span> <span class="n">aidan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">"aidan"</span><span class="p">,</span> <span class="s">"2006"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">aidan</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="n">Person</span> <span class="n">jun</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Student</span><span class="p">(</span><span class="s">"jun"</span><span class="p">,</span> <span class="s">"2005"</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="s">"football"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">jun</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="n">Person</span> <span class="n">allie</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Teacher</span><span class="p">(</span><span class="s">"allie"</span><span class="p">,</span> <span class="s">"1980"</span><span class="p">,</span> <span class="s">"math"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">"N/A"</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">allie</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
 </pre></div>
 
     </div>
@@ -370,9 +372,9 @@ Best player: Kylian Mbappe
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Person (name: John, birthday: 1990)
-Student (name: Jamie, birthday: 2005, extracurricular: football, gpa:3.5, grade: 12)
-Teacher (name: Jessica, birthday: 1980, subject: math, tenureYears:10, degree: PhD in Applied Math)
+<pre>Person (name: aidan, birthday: 2006)
+Student (name: jun, birthday: 2005, extracurricular: football, gpa:3.5, grade: 12)
+Teacher (name: allie, birthday: 1980, subject: math, tenureYears:10, degree: N/A)
 </pre>
 </div>
 </div>
