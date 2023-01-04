@@ -116,5 +116,3 @@ public class Light {
     
 
 }
-
-// Light.main(null);
