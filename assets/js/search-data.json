@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "CollegeBoard Revisions/Reflection",
-            "content": "College Board MCQ Corrections. . Question: #5 . The correct answer to this problem would be A: ( a &amp;&amp; b ) &amp;&amp; ( !c &amp;&amp; d ). . Question: #12 . The correct answer to this problem would be A: ( a &amp;&amp; b ) &amp;&amp; ( !c &amp;&amp; d ). .",
+            "content": "College Board MCQ Corrections. . Question: #5 . The correct answer to this problem would be A: ( a &amp;&amp; b ) &amp;&amp; ( !c &amp;&amp; d ). . Question: #12 . The correct answer to this problem would be A: (y &gt; 10000 | | x &gt; 1000) &amp;&amp; (y &gt; 10000 | | x &lt; 1500) because the original expression evaluates to true when either y is greater than 10000 or x is between 1000 and 1500. .",
             "url": "https://guapbeast.github.io/Trimester-1-Fast-Pages/jupyter/2023/01/21/CollegeBoardorrections.html",
             "relUrl": "/jupyter/2023/01/21/CollegeBoardorrections.html",
             "date": " • Jan 21, 2023"
