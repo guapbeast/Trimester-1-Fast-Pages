@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -138,86 +138,179 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>{
-   "attachments": {},
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "# Unit 7\n",
-    "- ArrayLists are like arrays, but can have vsize changed\n",
-    "<img src="images/difference-between-array-and-arraylist.png" alt="arrayList">\n",
-    "- many methods which can be used with arrayLists\n",
-    "    - size();\n",
-    "        - Returns the number of elements in the list\n",
-    "    - add(obj);\n",
-    "        - Adds element at the end\n",
-    "    - add(index, object);\n",
-    "        - Adds element at specific index\n",
-    "    - remove(index);\n",
-    "        - Removes element from specific index\n",
-    "    - set(index, object);\n",
-    "        - Replaces element at index with new object\n",
-    "    - get(index);\n",
-    "        - Returns element at index\n",
-    "- can traverse arrayList with for-loop/enhanced for-loop\n",
-    "- Homework: <a href="https://kinerboi.github.io/myFirstRepopart2/java/labs/2022/11/20/Unit7HW.html">https://kinerboi.github.io/myFirstRepopart2/java/labs/2022/11/20/Unit7HW.html</a> "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 4,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "There are 3 in the ArrayList\n",
-      "There are 3 in the ArrayList\n",
-      "There are now 4 dogs in the ArrayList\n",
-      "My dog is named Noodle\n"
-     ]
-    }
-   ],
-   "source": [
-    "// Unit 7 code example\n",
-    "import java.util.ArrayList; //never forget to import\n",
-    "\n",
-    "public class methodsArrayList {\n",
-    "    public static void main (String[] args) {\n",
-    "        ArrayList<string> dogs = new ArrayList<string>(Arrays.asList(\"Sparky\", \"Duke\", \"Noodle\")); //remeber the &lt;(Variable Type)&gt;\n",
-    "        ArrayList<string> dogs2 = new ArrayList<string>(Arrays.asList(\"Sparky\", \"Duke\", \"Noodle\"));\n",
-    "        System.out.println(\"There are \" + dogs.size() + \" in the ArrayList\"); \n",
-    "        System.out.println(\"There are \" + dogs2.size() + \" in the ArrayList\");\n",
-    "        \n",
-    "        //objects you add must be of the same data type\n",
-    "        dogs.add(\"Peanut\"); //using arrayList functions\n",
-    "        System.out.println(\"There are now \" + dogs.size() + \" dogs in the ArrayList\"); \n",
-    "\n",
-    "        String myDog = dogs.get(2);\n",
-    "        System.out.println(\"My dog is named \" + myDog);\n",
-    "    }\n",
-    "}\n",
-    "\n",
-    "//Note: you don't need to declare <string> again after new ArrayList\n",
-    "\n",
-    "methodsArrayList.main(null);\n"
-   ]
-  },
-  {&lt;/p&gt;
+<p>2D Arrays are a lot like arrays, but have an extra index which makes them 2D instead of 1D</p>
+<p>Element = a single value in the array
+Index = the position of the element in the array (starts from 0)
+Array Length = the number of elements in the array
+Array = a data structure used to implement a collection (list) of primitive or object reference data
+Is public, so can be accessed in any class</p>
+<p>A 2D array is an array of arrays, and can be a better way to store data</p>
 
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
  
+      <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
+         <span class="p">{</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">,</span> <span class="s">"g"</span> <span class="p">},</span>
+         <span class="p">{</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"h"</span> <span class="p">},</span>
+         <span class="p">{</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">,</span> <span class="s">"i"</span> <span class="p">}</span>
+      <span class="p">};</span>
+ 
+      <span class="c1">// Print the last element in the array!</span>
+       
+    <span class="p">}</span>
+ 
+ <span class="p">}</span>
+ <span class="n">Test</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
 
-</string></string></string></string></string></p>
+    </div>
 </div>
-</div></div>
 </div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can use Nested Loops to traverse 2D Arrays
+for example: to print out an entire array in order, you need to use these</p>
+<p>Make sure your columns for loop is always inside your rows for loop!
+Unless you want it printed the other way of course
+Print spaces and lines in between to make a neater matrix</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+ 
+      <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
+         <span class="p">{</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">,</span> <span class="s">"g"</span><span class="p">,</span> <span class="s">"l"</span> <span class="p">},</span>
+         <span class="p">{</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span> <span class="s">"k"</span> <span class="p">},</span>
+         <span class="p">{</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">,</span> <span class="s">"i"</span><span class="p">,</span> <span class="s">"j"</span> <span class="p">}</span>
+      <span class="p">};</span>
+ 
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+         <span class="p">}</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+      <span class="p">}</span>
+       
+    <span class="p">}</span>
+ 
+ <span class="p">}</span>
+ <span class="n">Test</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a f g l  
+b e h k  
+c d i j  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+  
+        <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="p">{</span> <span class="s">"Atlanta"</span><span class="p">,</span> <span class="s">"Baltimore"</span><span class="p">,</span> <span class="s">"Chicago"</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s">"Australia"</span><span class="p">,</span> <span class="s">"Boston"</span><span class="p">,</span> <span class="s">"Cincinnati"</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s">"Austin"</span><span class="p">,</span> <span class="s">"Beaumont"</span><span class="p">,</span> <span class="s">"Columbus"</span> <span class="p">}</span>
+        <span class="p">};</span>
+
+        <span class="n">String</span> <span class="n">longest</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">column</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">longest</span><span class="p">.</span><span class="na">length</span><span class="p">())</span> <span class="p">{</span>
+                    <span class="n">longest</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+         <span class="p">}</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">longest</span><span class="p">);</span>
+
+        <span class="c1">// Use nested for loops to find the longest or shortest string!</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Use nested for loops to find the longest or shortest string!"</span><span class="p">);</span>
+        
+    <span class="p">}</span>
+ 
+ <span class="p">}</span>
+<span class="n">Test</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Cincinnati
+Use nested for loops to find the longest or shortest string!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
 
 
   </div><!-- from https://github.com/utterance/utterances -->
