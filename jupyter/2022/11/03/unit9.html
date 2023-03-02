@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      2 min read
     
 </span></p>
 
@@ -138,20 +138,6 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Inheritance is the order in which different attributes, methods, or strings are called
-depends on whentheer class is extended or not, if class contains methods, parameters, strings, etc
-constructor: Where the attributes of a class are defined</p>
-<p>Overriding: allows a subclass or child class to provide a specific implementation of a method that has already been provided by a super-classes or parent classes. When a method in a subclass has the same name, same parameters or signature, and same return type (or sub-type) as a method in its super-class, then the method in the subclass will override the method in the super-class.</p>
-<p>Polymorphism: running mutliple things at once with the same name, can be done with different amounts of parameters in method
-toString method defines and JSONify's data protected is an access modifier so that the attribute isn't affected by outside modifiers.</p>
-<p>to use constructor of superclass in subclass, need to use super keyword, allowing use of constructors that were made in the superclass</p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -159,40 +145,23 @@ toString method defines and JSONify's data protected is an access modifier so th
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// Super class</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Car</span> <span class="p">{</span>
-   <span class="kd">protected</span> <span class="n">String</span> <span class="n">brandName</span><span class="p">;</span>
-   <span class="kd">protected</span> <span class="kt">double</span> <span class="n">range</span><span class="p">;</span>
-   <span class="kd">protected</span> <span class="kt">double</span> <span class="n">doorNumber</span><span class="p">;</span>
-   <span class="kd">protected</span> <span class="kt">double</span> <span class="n">maxSpeed</span><span class="p">;</span>
-   
-   <span class="c1">// Constructor for the attributes present in the superclass</span>
-   <span class="kd">public</span> <span class="nf">Car</span><span class="p">(</span><span class="n">String</span> <span class="n">brandName</span><span class="p">,</span> <span class="kt">double</span> <span class="n">range</span><span class="p">,</span> <span class="kt">double</span> <span class="n">doorNumber</span><span class="p">,</span> <span class="kt">double</span> <span class="n">maxSpeed</span><span class="p">)</span> <span class="p">{</span>
-       <span class="k">this</span><span class="p">.</span><span class="na">brandName</span> <span class="o">=</span> <span class="n">brandName</span><span class="p">;</span>
-       <span class="k">this</span><span class="p">.</span><span class="na">range</span> <span class="o">=</span> <span class="n">range</span><span class="p">;</span>
-       <span class="k">this</span><span class="p">.</span><span class="na">doorNumber</span> <span class="o">=</span> <span class="n">doorNumber</span><span class="p">;</span>
-       <span class="k">this</span><span class="p">.</span><span class="na">maxSpeed</span> <span class="o">=</span> <span class="n">maxSpeed</span><span class="p">;</span>
-   <span class="p">}</span>
-   
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">gas</span> <span class="p">()</span> <span class="p">{</span>
-       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Go!"</span><span class="p">);</span>
-   <span class="p">}</span>
-   
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">brake</span> <span class="p">()</span> <span class="p">{</span>
-       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Stop!"</span><span class="p">);</span>
-   <span class="p">}</span>
-   
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">gearShift</span> <span class="p">()</span> <span class="p">{</span>
-       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Use the stick"</span><span class="p">);</span>
-   <span class="p">}</span>
-   
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">steer</span> <span class="p">()</span> <span class="p">{</span>
-       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"turning left..."</span><span class="p">);</span>
-   <span class="p">}</span>
-   
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">horn</span> <span class="p">()</span> <span class="p">{</span>
-       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"honking... "</span><span class="p">);</span>
-   <span class="p">}</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="n">mass</span><span class="p">;</span> <span class="c1">//protected so the attribute isn't modified outside by outside modifiers</span>
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="kt">double</span> <span class="n">mass</span><span class="p">,</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//constructor with parameters of mass and lifespan</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">mass</span> <span class="o">=</span> <span class="n">mass</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">lifespan</span> <span class="o">=</span> <span class="n">lifespan</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span> <span class="c1">//extends superclass into dog subclass</span>
+    
+        <span class="kd">protected</span> <span class="n">String</span> <span class="n">color</span><span class="p">;</span> 
+        
+        <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="kt">double</span> <span class="n">mass</span><span class="p">,</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//another constructor</span>
+            <span class="kd">super</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">lifespan</span><span class="p">);</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -203,18 +172,6 @@ toString method defines and JSONify's data protected is an access modifier so th
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>You can use Nested Loops to traverse 2D Arrays
-for example: to print out an entire array in order, you need to use these</p>
-<p>Make sure your columns for loop is always inside your rows for loop!
-Unless you want it printed the other way of course
-Print spaces and lines in between to make a neater matrix</p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -222,27 +179,31 @@ Print spaces and lines in between to make a neater matrix</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+   <span class="kd">protected</span> <span class="kt">double</span> <span class="n">mass</span><span class="p">;</span>
+   <span class="kd">protected</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">;</span>
+   <span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="kt">double</span> <span class="n">mass</span><span class="p">,</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">mass</span> <span class="o">=</span> <span class="n">mass</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">lifespan</span> <span class="o">=</span> <span class="n">lifespan</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span>
+       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"sound"</span><span class="p">);</span>
+   <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
- 
-      <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
-         <span class="p">{</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"f"</span><span class="p">,</span> <span class="s">"g"</span><span class="p">,</span> <span class="s">"l"</span> <span class="p">},</span>
-         <span class="p">{</span> <span class="s">"b"</span><span class="p">,</span> <span class="s">"e"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span> <span class="s">"k"</span> <span class="p">},</span>
-         <span class="p">{</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"d"</span><span class="p">,</span> <span class="s">"i"</span><span class="p">,</span> <span class="s">"j"</span> <span class="p">}</span>
-      <span class="p">};</span>
- 
-      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
-         <span class="p">}</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
-      <span class="p">}</span>
+   <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+   
+       <span class="kd">protected</span> <span class="n">String</span> <span class="n">color</span><span class="p">;</span> 
        
-    <span class="p">}</span>
- 
- <span class="p">}</span>
- <span class="n">Test</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+       <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="kt">double</span> <span class="n">mass</span><span class="p">,</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span>
+           <span class="kd">super</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">lifespan</span><span class="p">);</span>
+           <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+       <span class="p">}</span>
+       <span class="nd">@Override</span>
+       <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//overrides the sound method, by printing woof instead of sound</span>
+           <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"woof"</span><span class="p">);</span>
+       <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
     </div>
@@ -275,53 +236,54 @@ c d i j
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
-
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-  
-        <span class="n">String</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="p">{</span> <span class="s">"Atlanta"</span><span class="p">,</span> <span class="s">"Baltimore"</span><span class="p">,</span> <span class="s">"Chicago"</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">"Australia"</span><span class="p">,</span> <span class="s">"Boston"</span><span class="p">,</span> <span class="s">"Cincinnati"</span> <span class="p">},</span>
-            <span class="p">{</span> <span class="s">"Austin"</span><span class="p">,</span> <span class="s">"Beaumont"</span><span class="p">,</span> <span class="s">"Columbus"</span> <span class="p">}</span>
-        <span class="p">};</span>
-
-        <span class="n">String</span> <span class="n">longest</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
-
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">column</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">longest</span><span class="p">.</span><span class="na">length</span><span class="p">())</span> <span class="p">{</span>
-                    <span class="n">longest</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">;</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-         <span class="p">}</span>
-
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">longest</span><span class="p">);</span>
-
-        <span class="c1">// Use nested for loops to find the longest or shortest string!</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Use nested for loops to find the longest or shortest string!"</span><span class="p">);</span>
-        
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="n">mass</span><span class="p">;</span>
+    <span class="kd">protected</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="kt">double</span> <span class="n">mass</span><span class="p">,</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">mass</span> <span class="o">=</span> <span class="n">mass</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">lifespan</span> <span class="o">=</span> <span class="n">lifespan</span><span class="p">;</span>
     <span class="p">}</span>
- 
- <span class="p">}</span>
-<span class="n">Test</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"sound"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">die</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"the cat is dead: "</span> <span class="o">+</span> <span class="n">a</span><span class="p">);</span> <span class="c1">//method to be overloaded</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+    
+        <span class="kd">protected</span> <span class="n">String</span> <span class="n">color</span><span class="p">;</span> 
+        
+        <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="kt">double</span> <span class="n">mass</span><span class="p">,</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">super</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">lifespan</span><span class="p">);</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"woof"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span> <span class="c1">//make  another subclass for Cat that extends off of Animal </span>
+    
+        <span class="kd">protected</span> <span class="n">String</span> <span class="n">breed</span><span class="p">;</span> 
+        
+        <span class="kd">public</span> <span class="nf">Cat</span><span class="p">(</span><span class="kt">double</span> <span class="n">mass</span><span class="p">,</span> <span class="kt">double</span> <span class="n">lifespan</span><span class="p">,</span> <span class="n">String</span> <span class="n">breed</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">super</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">lifespan</span><span class="p">);</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">breed</span> <span class="o">=</span> <span class="n">breed</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sound</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//overrides the sound</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"meow"</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">die</span><span class="p">(</span><span class="kt">boolean</span> <span class="n">a</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//method overloading</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"the cat is dead: "</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Cincinnati
-Use nested for loops to find the longest or shortest string!
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -343,38 +305,15 @@ Use nested for loops to find the longest or shortest string!
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
-
-<span class="kd">class</span> <span class="nc">Tree</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="o">[][]</span> <span class="n">tree</span><span class="p">;</span>    
-    <span class="kd">public</span> <span class="nf">Tree</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="n">tree</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[][]</span><span class="p">{</span>   <span class="c1">//2D array above is just a name, "new" makes a container ("object")</span>
-                <span class="p">{</span>                 <span class="s">"    * "</span>   <span class="p">},</span>     
-               <span class="p">{</span>                 <span class="s">"   *** "</span>     <span class="p">},</span>             
-              <span class="p">{</span>                 <span class="s">"  ***** "</span>    <span class="p">},</span>
-             <span class="p">{</span>                 <span class="s">"  ******* "</span>   <span class="p">},</span>
-             <span class="p">{</span>                <span class="s">"  ********* "</span> <span class="p">},</span>
-             <span class="p">{</span>               <span class="s">" *********** "</span> <span class="p">},</span>
-            <span class="p">{</span>               <span class="s">"************* "</span>  <span class="p">},</span>
-            <span class="p">{</span>                   <span class="s">"   || "</span>        <span class="p">},</span>
-            <span class="p">{</span>                   <span class="s">"   || "</span>        <span class="p">}</span>          
-            <span class="p">};</span>
-        <span class="p">}</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">String</span> <span class="nf">dayOfWeekToString</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="s">"{ \"month\": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">month</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="s">"\"day\": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">day</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="s">"\"year\": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">year</span> <span class="o">+</span> <span class="s">", "</span>
+        <span class="o">+</span> <span class="s">"\"dayOfWeek\": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">dayOfWeek</span> <span class="o">+</span> <span class="s">" }"</span><span class="p">);</span>
+<span class="p">}</span>
 
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printASCII</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">tree</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> 
-          <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">column</span> <span class="o">&lt;</span> <span class="n">tree</span><span class="o">[</span><span class="n">row</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">column</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">tree</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">column</span><span class="o">]</span><span class="p">);</span>
-          <span class="p">}</span>
-          
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-
-
-<span class="n">Tree</span> <span class="n">myTree</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tree</span><span class="p">();</span>
-<span class="n">myTree</span><span class="p">.</span><span class="na">printASCII</span><span class="p">();</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">dayOfWeekToString</span><span class="p">();</span>
+<span class="p">}</span>
 </pre></div>
 
     </div>
