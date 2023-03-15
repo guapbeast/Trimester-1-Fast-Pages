@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      12 min read
     
 </span></p>
 
@@ -138,6 +138,959 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>  <span class="c1">// Queue interface uses LL implementation</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"John"</span><span class="p">);</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Jane"</span><span class="p">);</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Bob"</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>true</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>  <span class="c1">// Queue interface uses LL implementation</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"John"</span><span class="p">);</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Jane"</span><span class="p">);</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Bob"</span><span class="p">);</span>
+<span class="c1">// Collections has a toArray convertion</span>
+<span class="n">Object</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">toArray</span><span class="p">();</span>
+
+<span class="c1">// Empty queue</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Empty Queue"</span><span class="p">);</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">// Interate while size</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">());</span>
+
+<span class="c1">// Iterate of array</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Iterate over Array"</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">Object</span> <span class="n">a</span> <span class="p">:</span> <span class="n">arr</span><span class="p">)</span> <span class="c1">// Type is Object from convertion</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Empty Queue
+John
+Jane
+Bob
+Iterate over Array
+John
+Jane
+Bob
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/* This is wrapper class...</span>
+<span class="cm"> Objective would be to push more functionality into this Class to enforce consistent definition</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Generics</span> <span class="p">{</span>
+	<span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">masterType</span> <span class="o">=</span> <span class="s">"Generic"</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="n">String</span> <span class="n">type</span><span class="p">;</span>	<span class="c1">// extender should define their data type</span>
+
+	<span class="c1">// generic enumerated interface</span>
+	<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">KeyTypes</span> <span class="p">{</span>
+		<span class="n">String</span> <span class="nf">name</span><span class="p">();</span>
+	<span class="p">}</span>
+	<span class="kd">protected</span> <span class="kd">abstract</span> <span class="n">KeyTypes</span> <span class="nf">getKey</span><span class="p">();</span>  	<span class="c1">// this method helps force usage of KeyTypes</span>
+
+	<span class="c1">// getter</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getMasterType</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">masterType</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// getter</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">getType</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="n">type</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// setter</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setType</span><span class="p">(</span><span class="n">String</span> <span class="n">type</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">type</span> <span class="o">=</span> <span class="n">type</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="c1">// this method is used to establish key order</span>
+	<span class="kd">public</span> <span class="kd">abstract</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">();</span>
+
+	<span class="c1">// static print method used by extended classes</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="n">Generics</span><span class="o">[]</span> <span class="n">objs</span><span class="p">)</span> <span class="p">{</span>
+		<span class="c1">// print 'Object' properties</span>
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">objs</span><span class="p">.</span><span class="na">getClass</span><span class="p">()</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">objs</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+
+		<span class="c1">// print 'Generics' properties</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">objs</span><span class="p">.</span><span class="na">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">Generics</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">objs</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>	<span class="c1">// Look at properties of 1st element</span>
+			<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span>
+					<span class="n">obj</span><span class="p">.</span><span class="na">getMasterType</span><span class="p">()</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> 
+					<span class="n">obj</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span>
+					<span class="s">" listed by "</span> <span class="o">+</span>
+					<span class="n">obj</span><span class="p">.</span><span class="na">getKey</span><span class="p">());</span>
+		<span class="p">}</span>
+
+		<span class="c1">// print "Generics: Objects'</span>
+		<span class="k">for</span><span class="p">(</span><span class="n">Object</span> <span class="n">o</span> <span class="p">:</span> <span class="n">objs</span><span class="p">)</span>	<span class="c1">// observe that type is Opaque</span>
+			<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">o</span><span class="p">);</span>
+
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Alphabet</span> <span class="kd">extends</span> <span class="n">Generics</span> <span class="p">{</span>
+	<span class="c1">// Class data</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>  <span class="c1">// static initializer</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span><span class="n">Alphabet</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;}</span>
+	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">title</span><span class="p">,</span> <span class="n">letter</span><span class="p">}</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span>  <span class="c1">// constant used in data initialization</span>
+
+	<span class="c1">// Instance data</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="kt">char</span> <span class="n">letter</span><span class="p">;</span>
+	
+	<span class="cm">/*</span>
+<span class="cm">	 * single letter object</span>
+<span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="nf">Alphabet</span><span class="p">(</span><span class="kt">char</span> <span class="n">letter</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">"Alphabet"</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">letter</span> <span class="o">=</span> <span class="n">letter</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="cm">/* 'Generics' requires getKey to help enforce KeyTypes usage */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="n">KeyTypes</span> <span class="nf">getKey</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">Alphabet</span><span class="p">.</span><span class="na">key</span><span class="p">;</span> <span class="p">}</span>
+
+	<span class="cm">/* 'Generics' requires toString override</span>
+<span class="cm">	 * toString provides data based off of Static Key setting</span>
+<span class="cm">	 */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">String</span> <span class="n">output</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">letter</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">letter</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">letter</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// Test data initializer for upper case Alphabet</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">Alphabet</span><span class="o">[]</span> <span class="nf">alphabetData</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">Alphabet</span><span class="o">[]</span> <span class="n">alphabet</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Alphabet</span><span class="o">[</span><span class="n">Alphabet</span><span class="p">.</span><span class="na">size</span><span class="o">]</span><span class="p">;</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">Alphabet</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">alphabet</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Alphabet</span><span class="p">(</span> <span class="p">(</span><span class="kt">char</span><span class="p">)(</span><span class="sc">'A'</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="p">);</span>
+		<span class="p">}</span> 	
+		<span class="k">return</span> <span class="n">alphabet</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="cm">/* </span>
+<span class="cm">	 * main to test Animal class</span>
+<span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="c1">// Inheritance Hierarchy</span>
+		<span class="n">Alphabet</span><span class="o">[]</span> <span class="n">objs</span> <span class="o">=</span> <span class="n">alphabetData</span><span class="p">();</span>
+
+		<span class="c1">// print with title</span>
+		<span class="n">Alphabet</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">);</span>
+		<span class="n">Alphabet</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+
+		<span class="c1">// print letter only</span>
+		<span class="n">Alphabet</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">letter</span><span class="p">);</span>
+		<span class="n">Alphabet</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+<span class="p">}</span>
+<span class="n">Alphabet</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>class [LREPL.$JShell$25$Alphabet; 26
+Generic: Alphabet listed by title
+Alphabet: A
+Alphabet: B
+Alphabet: C
+Alphabet: D
+Alphabet: E
+Alphabet: F
+Alphabet: G
+Alphabet: H
+Alphabet: I
+Alphabet: J
+Alphabet: K
+Alphabet: L
+Alphabet: M
+Alphabet: N
+Alphabet: O
+Alphabet: P
+Alphabet: Q
+Alphabet: R
+Alphabet: S
+Alphabet: T
+Alphabet: U
+Alphabet: V
+Alphabet: W
+Alphabet: X
+Alphabet: Y
+Alphabet: Z
+
+class [LREPL.$JShell$25$Alphabet; 26
+Generic: Alphabet listed by letter
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * Animal class extends Generics and defines abstract methods</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="kd">extends</span> <span class="n">Generics</span> <span class="p">{</span>
+	<span class="c1">// Class data</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>  <span class="c1">// static initializer</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span> <span class="n">Animal</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;</span> <span class="p">}</span>
+	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">title</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">color</span><span class="p">}</span>
+
+	<span class="c1">// Instance data</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">color</span><span class="p">;</span>
+
+	<span class="cm">/* constructor</span>
+<span class="cm">	 *</span>
+<span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="n">String</span> <span class="n">color</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kd">super</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">"Animal"</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="cm">/* 'Generics' requires getKey to help enforce KeyTypes usage */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="n">KeyTypes</span> <span class="nf">getKey</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">Animal</span><span class="p">.</span><span class="na">key</span><span class="p">;</span> <span class="p">}</span>
+	
+	<span class="cm">/* 'Generics' requires toString override</span>
+<span class="cm">	 * toString provides data based off of Static Key setting</span>
+<span class="cm">	 */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">String</span> <span class="n">output</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">name</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">age</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="s">"00"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="p">;</span>
+			<span class="n">output</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">color</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">color</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+		
+	<span class="p">}</span>
+
+	<span class="c1">// Test data initializer</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">Animal</span><span class="o">[]</span> <span class="nf">animals</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="k">new</span> <span class="n">Animal</span><span class="o">[]</span><span class="p">{</span>
+				<span class="k">new</span> <span class="n">Animal</span><span class="p">(</span><span class="s">"Lion"</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s">"Gold"</span><span class="p">),</span>
+				<span class="k">new</span> <span class="n">Animal</span><span class="p">(</span><span class="s">"Pig"</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s">"Pink"</span><span class="p">),</span>
+				<span class="k">new</span> <span class="n">Animal</span><span class="p">(</span><span class="s">"Robin"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">"Red"</span><span class="p">),</span>
+				<span class="k">new</span> <span class="n">Animal</span><span class="p">(</span><span class="s">"Cat"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">"Black"</span><span class="p">),</span>
+				<span class="k">new</span> <span class="n">Animal</span><span class="p">(</span><span class="s">"Kitty"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s">"Calico"</span><span class="p">),</span>
+				<span class="k">new</span> <span class="n">Animal</span><span class="p">(</span><span class="s">"Dog"</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="s">"Brown"</span><span class="p">)</span>
+		<span class="p">};</span>
+	<span class="p">}</span>
+	
+	<span class="cm">/* main to test Animal class</span>
+<span class="cm">	 * </span>
+<span class="cm">	 */</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="c1">// Inheritance Hierarchy</span>
+		<span class="n">Animal</span><span class="o">[]</span> <span class="n">objs</span> <span class="o">=</span> <span class="n">animals</span><span class="p">();</span>
+
+		<span class="c1">// print with title</span>
+		<span class="n">Animal</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">);</span>
+		<span class="n">Animal</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+
+		<span class="c1">// print name only</span>
+		<span class="n">Animal</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+		<span class="n">Animal</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+	<span class="p">}</span>
+
+<span class="p">}</span>
+<span class="n">Animal</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>class [LREPL.$JShell$27$Animal; 6
+Generic: Animal listed by title
+Animal: Lion, Gold, 8
+Animal: Pig, Pink, 3
+Animal: Robin, Red, 7
+Animal: Cat, Black, 10
+Animal: Kitty, Calico, 1
+Animal: Dog, Brown, 14
+
+class [LREPL.$JShell$27$Animal; 6
+Generic: Animal listed by name
+Lion
+Pig
+Robin
+Cat
+Kitty
+Dog
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cupcake</span> <span class="kd">extends</span> <span class="n">Generics</span> <span class="p">{</span>
+	<span class="c1">// Class data</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>  <span class="c1">// static initializer</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span><span class="n">Cupcake</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;}</span>
+	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">title</span><span class="p">,</span> <span class="n">flavor</span><span class="p">,</span> <span class="n">frosting</span><span class="p">,</span> <span class="n">sprinkles</span><span class="p">}</span>
+
+	<span class="c1">// Instance data</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">frosting</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">sprinkles</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">flavor</span><span class="p">;</span>
+
+	<span class="c1">// Constructor</span>
+	<span class="n">Cupcake</span><span class="p">(</span><span class="n">String</span> <span class="n">frosting</span><span class="p">,</span> <span class="kt">int</span> <span class="n">sprinkles</span><span class="p">,</span> <span class="n">String</span> <span class="n">flavor</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">"Cupcake"</span><span class="p">);</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">frosting</span> <span class="o">=</span> <span class="n">frosting</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">sprinkles</span> <span class="o">=</span> <span class="n">sprinkles</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">flavor</span> <span class="o">=</span> <span class="n">flavor</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="cm">/* 'Generics' requires getKey to help enforce KeyTypes usage */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="n">KeyTypes</span> <span class="nf">getKey</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">Cupcake</span><span class="p">.</span><span class="na">key</span><span class="p">;</span> <span class="p">}</span>
+
+	<span class="cm">/* 'Generics' requires toString override</span>
+<span class="cm">	 * toString provides data based off of Static Key setting</span>
+<span class="cm">	 */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>		
+		<span class="n">String</span> <span class="n">output</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">flavor</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">flavor</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">frosting</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">frosting</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">sprinkles</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="s">"00"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">sprinkles</span><span class="p">;</span>
+			<span class="n">output</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">flavor</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">frosting</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">sprinkles</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="c1">// Test data initializer</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">Cupcake</span><span class="o">[]</span> <span class="nf">cupcakes</span><span class="p">()</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="k">new</span> <span class="n">Cupcake</span><span class="o">[]</span><span class="p">{</span>
+				<span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Red"</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s">"Red Velvet"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Orange"</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s">"Orange"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Yellow"</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s">"Lemon"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Green"</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">"Apple"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Blue"</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s">"Blueberry"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Purple"</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s">"Blackberry"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Pink"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s">"Strawberry"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Tan"</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="s">"Vanilla"</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Cupcake</span><span class="p">(</span><span class="s">"Brown"</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="s">"Chocolate"</span><span class="p">),</span>
+		<span class="p">};</span>
+	<span class="p">}</span>
+	
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="c1">// Inheritance Hierarchy</span>
+		<span class="n">Cupcake</span><span class="o">[]</span> <span class="n">objs</span> <span class="o">=</span> <span class="n">cupcakes</span><span class="p">();</span>
+
+		<span class="c1">// print with title</span>
+		<span class="n">Cupcake</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">);</span>
+		<span class="n">Cupcake</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+
+		<span class="c1">// print flavor only</span>
+		<span class="n">Cupcake</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">flavor</span><span class="p">);</span>
+		<span class="n">Cupcake</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+<span class="p">}</span>
+<span class="n">Cupcake</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>class [LREPL.$JShell$29$Cupcake; 9
+Generic: Cupcake listed by title
+Cupcake: Red Velvet, Red, 4
+Cupcake: Orange, Orange, 5
+Cupcake: Lemon, Yellow, 6
+Cupcake: Apple, Green, 7
+Cupcake: Blueberry, Blue, 8
+Cupcake: Blackberry, Purple, 9
+Cupcake: Strawberry, Pink, 10
+Cupcake: Vanilla, Tan, 11
+Cupcake: Chocolate, Brown, 12
+
+class [LREPL.$JShell$29$Cupcake; 9
+Generic: Cupcake listed by flavor
+Red Velvet
+Orange
+Lemon
+Apple
+Blueberry
+Blackberry
+Strawberry
+Vanilla
+Chocolate
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> *  Implementation of a Double Linked List;  forward and backward links point to adjacent Nodes.</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
+ <span class="p">{</span>
+     <span class="kd">private</span> <span class="n">T</span> <span class="n">data</span><span class="p">;</span>
+     <span class="kd">private</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">prevNode</span><span class="p">,</span> <span class="n">nextNode</span><span class="p">;</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Constructs a new element</span>
+<span class="cm">      *</span>
+<span class="cm">      * @param  data, data of object</span>
+<span class="cm">      * @param  node, previous node</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="nf">LinkedList</span><span class="p">(</span><span class="n">T</span> <span class="n">data</span><span class="p">,</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">setPrevNode</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">setNextNode</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+     <span class="p">}</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Clone an object,</span>
+<span class="cm">      *</span>
+<span class="cm">      * @param  node  object to clone</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="nf">LinkedList</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">data</span><span class="p">);</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">setPrevNode</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">prevNode</span><span class="p">);</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">setNextNode</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="na">nextNode</span><span class="p">);</span>
+     <span class="p">}</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Setter for T data in DoubleLinkedNode object</span>
+<span class="cm">      *</span>
+<span class="cm">      * @param  data, update data of object</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="p">(</span><span class="n">T</span> <span class="n">data</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
+     <span class="p">}</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Returns T data for this element</span>
+<span class="cm">      *</span>
+<span class="cm">      * @return  data associated with object</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="n">T</span> <span class="nf">getData</span><span class="p">()</span>
+     <span class="p">{</span>
+         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">data</span><span class="p">;</span>
+     <span class="p">}</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Setter for prevNode in DoubleLinkedNode object</span>
+<span class="cm">      *</span>
+<span class="cm">      * @param node, prevNode to current Object</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setPrevNode</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">prevNode</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
+     <span class="p">}</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Setter for nextNode in DoubleLinkedNode object</span>
+<span class="cm">      *</span>
+<span class="cm">      * @param node, nextNode to current Object</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNextNode</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">node</span><span class="p">)</span>
+     <span class="p">{</span>
+         <span class="k">this</span><span class="p">.</span><span class="na">nextNode</span> <span class="o">=</span> <span class="n">node</span><span class="p">;</span>
+     <span class="p">}</span>
+ 
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Returns reference to previous object in list</span>
+<span class="cm">      *</span>
+<span class="cm">      * @return  the previous object in the list</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getPrevious</span><span class="p">()</span>
+     <span class="p">{</span>
+         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">prevNode</span><span class="p">;</span>
+     <span class="p">}</span>
+ 
+     <span class="cm">/**</span>
+<span class="cm">      *  Returns reference to next object in list</span>
+<span class="cm">      *</span>
+<span class="cm">      * @return  the next object in the list</span>
+<span class="cm">      */</span>
+     <span class="kd">public</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getNext</span><span class="p">()</span>
+     <span class="p">{</span>
+         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">nextNode</span><span class="p">;</span>
+     <span class="p">}</span>
+ 
+ <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Iterator</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Queue Iterator</span>
+<span class="cm"> *</span>
+<span class="cm"> * 1. "has a" current reference in Queue</span>
+<span class="cm"> * 2. supports iterable required methods for next that returns a generic T Object</span>
+<span class="cm"> */</span>
+<span class="kd">class</span> <span class="nc">QueueIterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">current</span><span class="p">;</span>  <span class="c1">// current element in iteration</span>
+
+    <span class="c1">// QueueIterator is pointed to the head of the list for iteration</span>
+    <span class="kd">public</span> <span class="nf">QueueIterator</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">head</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// hasNext informs if next element exists</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">hasNext</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">current</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// next returns data object and advances to next position in queue</span>
+    <span class="kd">public</span> <span class="n">T</span> <span class="nf">next</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">T</span> <span class="n">data</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="na">getNext</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">data</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Queue: custom implementation</span>
+<span class="cm"> * @author     John Mortensen</span>
+<span class="cm"> *</span>
+<span class="cm"> * 1. Uses custom LinkedList of Generic type T</span>
+<span class="cm"> * 2. Implements Iterable</span>
+<span class="cm"> * 3. "has a" LinkedList for head and tail</span>
+<span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">Iterable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">head</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Add a new object at the end of the Queue,</span>
+<span class="cm">     *</span>
+<span class="cm">     * @param  data,  is the data to be inserted in the Queue.</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="n">T</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// add new object to end of Queue</span>
+        <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">tail</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="kc">null</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">head</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span>  <span class="c1">// initial condition</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">head</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="p">;</span>
+        <span class="k">else</span> <span class="p">{</span>  <span class="c1">// nodes in queue</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">tail</span><span class="p">.</span><span class="na">setNextNode</span><span class="p">(</span><span class="n">tail</span><span class="p">);</span> <span class="c1">// current tail points to new tail</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="p">;</span>  <span class="c1">// update tail</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Returns the data of head.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return  data, the dequeued data</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">T</span> <span class="nf">delete</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">T</span> <span class="n">data</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">peek</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">tail</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// initial condition</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">head</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="na">head</span><span class="p">.</span><span class="na">getNext</span><span class="p">();</span> <span class="c1">// current tail points to new tail</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">head</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="na">head</span><span class="p">.</span><span class="na">setPrevNode</span><span class="p">(</span><span class="n">tail</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">data</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Returns the data of head.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return  this.head.getData(), the head data in Queue.</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">T</span> <span class="nf">peek</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">head</span><span class="p">.</span><span class="na">getData</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Returns the head object.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return  this.head, the head object in Queue.</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getHead</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">head</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Returns the tail object.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return  this.tail, the last object in Queue</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getTail</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">tail</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Returns the iterator object.</span>
+<span class="cm">     *</span>
+<span class="cm">     * @return  this, instance of object</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">iterator</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="n">QueueIterator</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">head</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Queue Manager</span>
+<span class="cm"> * 1. "has a" Queue</span>
+<span class="cm"> * 2. support management of Queue tasks (aka: titling, adding a list, printing)</span>
+<span class="cm"> */</span>
+<span class="kd">class</span> <span class="nc">QueueManager</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="c1">// queue data</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span> <span class="c1">// name of queue</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// number of objects in queue</span>
+    <span class="kd">public</span> <span class="kd">final</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Queue</span><span class="o">&lt;&gt;</span><span class="p">();</span> <span class="c1">// queue object</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Queue constructor</span>
+<span class="cm">     *  Title with empty queue</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">QueueManager</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     *  Queue constructor</span>
+<span class="cm">     *  Title with series of Arrays of Objects</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">QueueManager</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">T</span><span class="o">[]</span><span class="p">...</span> <span class="n">seriesOfObjects</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">addList</span><span class="p">(</span><span class="n">seriesOfObjects</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Add a list of objects to queue</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addList</span><span class="p">(</span><span class="n">T</span><span class="o">[]</span><span class="p">...</span> <span class="n">seriesOfObjects</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//accepts multiple generic T lists</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">T</span><span class="o">[]</span> <span class="n">objects</span><span class="p">:</span> <span class="n">seriesOfObjects</span><span class="p">)</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">T</span> <span class="n">data</span> <span class="p">:</span> <span class="n">objects</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="na">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+                <span class="k">this</span><span class="p">.</span><span class="na">count</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Print any array objects from queue</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">printQueue</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">" count: "</span> <span class="o">+</span> <span class="n">count</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">" data: "</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">T</span> <span class="n">data</span> <span class="p">:</span> <span class="n">queue</span><span class="p">)</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">data</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Driver Class</span>
+<span class="cm"> * Tests queue with string, integers, and mixes of Classes and types</span>
+<span class="cm"> */</span>
+<span class="kd">class</span> <span class="nc">QueueTester</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Create iterable Queue of Words</span>
+        <span class="n">Object</span><span class="o">[]</span> <span class="n">words</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">[]</span> <span class="p">{</span> <span class="s">"seven"</span><span class="p">,</span> <span class="s">"slimy"</span><span class="p">,</span> <span class="s">"snakes"</span><span class="p">,</span> <span class="s">"sallying"</span><span class="p">,</span> <span class="s">"slowly"</span><span class="p">,</span> <span class="s">"slithered"</span><span class="p">,</span> <span class="s">"southward"</span><span class="p">};</span>
+        <span class="n">QueueManager</span> <span class="n">qWords</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueueManager</span><span class="p">(</span><span class="s">"Words"</span><span class="p">,</span> <span class="n">words</span> <span class="p">);</span>
+        <span class="n">qWords</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span>
+
+        <span class="c1">// Create iterable Queue of Integers</span>
+        <span class="n">Object</span><span class="o">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">[]</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">};</span>
+        <span class="n">QueueManager</span> <span class="n">qNums</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueueManager</span><span class="p">(</span><span class="s">"Integers"</span><span class="p">,</span> <span class="n">numbers</span> <span class="p">);</span>
+        <span class="n">qNums</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span>
+
+        <span class="c1">// Create iterable Queue of NCS Generics</span>
+        <span class="n">Animal</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">Animal</span><span class="p">.</span><span class="na">KeyType</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+        <span class="n">Alphabet</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">Alphabet</span><span class="p">.</span><span class="na">KeyType</span><span class="p">.</span><span class="na">letter</span><span class="p">);</span>
+        <span class="n">Cupcake</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">Cupcake</span><span class="p">.</span><span class="na">KeyType</span><span class="p">.</span><span class="na">flavor</span><span class="p">);</span>
+        <span class="c1">// Illustrates use of a series of repeating arguments</span>
+        <span class="n">QueueManager</span> <span class="n">qGenerics</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueueManager</span><span class="p">(</span><span class="s">"My Generics"</span><span class="p">,</span>
+                <span class="n">Alphabet</span><span class="p">.</span><span class="na">alphabetData</span><span class="p">(),</span>
+                <span class="n">Animal</span><span class="p">.</span><span class="na">animals</span><span class="p">(),</span>
+                <span class="n">Cupcake</span><span class="p">.</span><span class="na">cupcakes</span><span class="p">()</span>
+        <span class="p">);</span>
+        <span class="n">qGenerics</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span>
+
+        <span class="c1">// Create iterable Queue of Mixed types of data</span>
+        <span class="n">QueueManager</span> <span class="n">qMix</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QueueManager</span><span class="p">(</span><span class="s">"Mixed"</span><span class="p">);</span>
+        <span class="n">qMix</span><span class="p">.</span><span class="na">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Start"</span><span class="p">);</span>
+        <span class="n">qMix</span><span class="p">.</span><span class="na">addList</span><span class="p">(</span>
+                <span class="n">words</span><span class="p">,</span>
+                <span class="n">numbers</span><span class="p">,</span>
+                <span class="n">Alphabet</span><span class="p">.</span><span class="na">alphabetData</span><span class="p">(),</span>
+                <span class="n">Animal</span><span class="p">.</span><span class="na">animals</span><span class="p">(),</span>
+                <span class="n">Cupcake</span><span class="p">.</span><span class="na">cupcakes</span><span class="p">()</span>
+        <span class="p">);</span>
+        <span class="n">qMix</span><span class="p">.</span><span class="na">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"End"</span><span class="p">);</span>
+        <span class="n">qMix</span><span class="p">.</span><span class="na">printQueue</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">QueueTester</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Words count: 7
+Words data: seven slimy snakes sallying slowly slithered southward 
+Integers count: 10
+Integers data: 0 1 2 3 4 5 6 7 8 9 
+My Generics count: 41
+My Generics data: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Lion Pig Robin Cat Kitty Dog Red Velvet Orange Lemon Apple Blueberry Blackberry Strawberry Vanilla Chocolate 
+Mixed count: 58
+Mixed data: Start seven slimy snakes sallying slowly slithered southward 0 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Lion Pig Robin Cat Kitty Dog Red Velvet Orange Lemon Apple Blueberry Blackberry Strawberry Vanilla Chocolate End 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
