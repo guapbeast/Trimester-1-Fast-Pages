@@ -213,20 +213,20 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Language</span> <span class="kd">extends</span> <span class="n">Generics</span> <span class="p">{</span>
 	<span class="c1">// Class data</span>
-	<span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">purpose</span><span class="p">;</span>  <span class="c1">// static initializer</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">language</span><span class="p">;</span>  <span class="c1">// static initializer</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span><span class="n">Language</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;}</span>
-	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">model</span><span class="p">,</span> <span class="n">purpose</span><span class="p">,</span> <span class="n">engine</span><span class="p">,</span> <span class="n">year</span><span class="p">}</span>
+	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">model</span><span class="p">,</span> <span class="n">language</span><span class="p">,</span> <span class="n">engine</span><span class="p">,</span> <span class="n">year</span><span class="p">}</span>
 
 	<span class="c1">// Instance data</span>
-	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">purpose</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">language</span><span class="p">;</span>
 	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">engine</span><span class="p">;</span>
 	<span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">year</span><span class="p">;</span>
 
 	<span class="c1">// Constructor</span>
-	<span class="n">Language</span><span class="p">(</span><span class="n">String</span> <span class="n">purpose</span><span class="p">,</span> <span class="n">String</span> <span class="n">engine</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span>
+	<span class="n">Language</span><span class="p">(</span><span class="n">String</span> <span class="n">language</span><span class="p">,</span> <span class="n">String</span> <span class="n">engine</span><span class="p">,</span> <span class="kt">int</span> <span class="n">year</span><span class="p">)</span>
 	<span class="p">{</span>
 		<span class="k">this</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">"Language"</span><span class="p">);</span>
-		<span class="k">this</span><span class="p">.</span><span class="na">purpose</span> <span class="o">=</span> <span class="n">purpose</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">language</span> <span class="o">=</span> <span class="n">language</span><span class="p">;</span>
 		<span class="k">this</span><span class="p">.</span><span class="na">engine</span> <span class="o">=</span> <span class="n">engine</span><span class="p">;</span>
 		<span class="k">this</span><span class="p">.</span><span class="na">year</span> <span class="o">=</span> <span class="n">year</span><span class="p">;</span>
 	<span class="p">}</span>
@@ -241,15 +241,15 @@ window.onload = wrap_img;
 	<span class="nd">@Override</span>
 	<span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>		
 		<span class="n">String</span> <span class="n">output</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
-		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">purpose</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
-			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">purpose</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">language</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">language</span><span class="p">;</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">engine</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
 			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">engine</span><span class="p">;</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">year</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
 			<span class="n">output</span> <span class="o">+=</span> <span class="s">"00"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">year</span><span class="p">;</span>
 			<span class="n">output</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-			<span class="n">output</span> <span class="o">=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">purpose</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">engine</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">year</span><span class="p">;</span>
+			<span class="n">output</span> <span class="o">=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">language</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">engine</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">year</span><span class="p">;</span>
 		<span class="p">}</span>
 		<span class="k">return</span> <span class="n">output</span><span class="p">;</span>
 	<span class="p">}</span>
@@ -257,14 +257,14 @@ window.onload = wrap_img;
 	<span class="c1">// Test data initializer</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="n">Language</span><span class="o">[]</span> <span class="nf">Language</span><span class="p">()</span> <span class="p">{</span>
 		<span class="k">return</span> <span class="k">new</span> <span class="n">Language</span><span class="o">[]</span><span class="p">{</span>
-				<span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"Java"</span><span class="p">,</span> <span class="s">"V8"</span><span class="p">,</span><span class="mi">1995</span><span class="p">),</span>
-			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"HTML"</span><span class="p">,</span> <span class="s">"V8"</span><span class="p">,</span><span class="mi">1999</span><span class="p">),</span>
-			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"CSS"</span><span class="p">,</span> <span class="s">"V8"</span><span class="p">,</span><span class="mi">1996</span><span class="p">),</span>
-			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"Markdown"</span><span class="p">,</span> <span class="s">"V8"</span><span class="p">,</span><span class="mi">2004</span><span class="p">),</span>
-			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"Javascript"</span><span class="p">,</span> <span class="s">"V8"</span><span class="p">,</span><span class="mi">1995</span><span class="p">),</span>
-			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"Python"</span><span class="p">,</span> <span class="s">"V8"</span><span class="p">,</span><span class="mi">1991</span><span class="p">),</span>
-			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"SQL"</span><span class="p">,</span> <span class="s">"V8"</span><span class="p">,</span><span class="mi">1970</span><span class="p">),</span>
-			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"C++"</span><span class="p">,</span> <span class="s">"V8"</span><span class="p">,</span><span class="mi">1983</span><span class="p">),</span>
+				<span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"Java"</span><span class="p">,</span> <span class="s">"OO"</span><span class="p">,</span><span class="mi">1995</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"HTML"</span><span class="p">,</span> <span class="s">"MarkUp"</span><span class="p">,</span><span class="mi">1999</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"CSS"</span><span class="p">,</span> <span class="s">"Style"</span><span class="p">,</span><span class="mi">1996</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"Markdown"</span><span class="p">,</span> <span class="s">"Markup"</span><span class="p">,</span><span class="mi">2004</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"Javascript"</span><span class="p">,</span> <span class="s">"Frontend"</span><span class="p">,</span><span class="mi">1995</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"Python"</span><span class="p">,</span> <span class="s">"OO"</span><span class="p">,</span><span class="mi">1991</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"SQL"</span><span class="p">,</span> <span class="s">"Query"</span><span class="p">,</span><span class="mi">1970</span><span class="p">),</span>
+			    <span class="k">new</span> <span class="n">Language</span><span class="p">(</span><span class="s">"C++"</span><span class="p">,</span> <span class="s">"OO"</span><span class="p">,</span><span class="mi">1983</span><span class="p">),</span>
 		<span class="p">};</span>
 	<span class="p">}</span>
 	
@@ -276,7 +276,7 @@ window.onload = wrap_img;
 		<span class="n">Language</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">model</span><span class="p">);</span>
 		<span class="n">Language</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
 		<span class="c1">// print with title</span>
-		<span class="n">Language</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">purpose</span><span class="p">);</span>
+		<span class="n">Language</span><span class="p">.</span><span class="na">setOrder</span><span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">language</span><span class="p">);</span>
 		<span class="n">Language</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">objs</span><span class="p">);</span>
 
 	<span class="p">}</span>
@@ -295,7 +295,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>class [LREPL.$JShell$15B$Language; 8
+<pre>class [LREPL.$JShell$15C$Language; 8
 Generic: Language listed by model
 Language: Java, V8, 1995
 Language: HTML, V8, 1999
@@ -306,8 +306,8 @@ Language: Python, V8, 1991
 Language: SQL, V8, 1970
 Language: C++, V8, 1983
 
-class [LREPL.$JShell$15B$Language; 8
-Generic: Language listed by purpose
+class [LREPL.$JShell$15C$Language; 8
+Generic: Language listed by language
 Java
 HTML
 CSS
@@ -338,22 +338,22 @@ C++
 	<span class="c1">// Class data</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="n">KeyTypes</span> <span class="n">key</span> <span class="o">=</span> <span class="n">KeyType</span><span class="p">.</span><span class="na">title</span><span class="p">;</span>  <span class="c1">// static initializer</span>
 	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setOrder</span><span class="p">(</span><span class="n">KeyTypes</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span> <span class="n">language</span><span class="p">.</span><span class="na">key</span> <span class="o">=</span> <span class="n">key</span><span class="p">;</span> <span class="p">}</span>
-	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">title</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">purpose</span><span class="p">}</span>
+	<span class="kd">public</span> <span class="kd">enum</span> <span class="n">KeyType</span> <span class="kd">implements</span> <span class="n">KeyTypes</span> <span class="p">{</span><span class="n">title</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">language</span><span class="p">}</span>
 
 	<span class="c1">// Instance data</span>
 	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
 	<span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
-	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">purpose</span><span class="p">;</span>
+	<span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">language</span><span class="p">;</span>
 
 	<span class="cm">/* constructor</span>
 <span class="cm">	 *</span>
 <span class="cm">	 */</span>
-	<span class="kd">public</span> <span class="nf">language</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="n">String</span> <span class="n">purpose</span><span class="p">)</span>
+	<span class="kd">public</span> <span class="nf">language</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">,</span> <span class="n">String</span> <span class="n">language</span><span class="p">)</span>
 	<span class="p">{</span>
 		<span class="kd">super</span><span class="p">.</span><span class="na">setType</span><span class="p">(</span><span class="s">"language"</span><span class="p">);</span>
 		<span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
 		<span class="k">this</span><span class="p">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
-		<span class="k">this</span><span class="p">.</span><span class="na">purpose</span> <span class="o">=</span> <span class="n">purpose</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="na">language</span> <span class="o">=</span> <span class="n">language</span><span class="p">;</span>
 	<span class="p">}</span>
 
 	<span class="cm">/* 'Generics' requires getKey to help enforce KeyTypes usage */</span>
@@ -372,10 +372,10 @@ C++
 		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">age</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
 			<span class="n">output</span> <span class="o">+=</span> <span class="s">"00"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="p">;</span>
 			<span class="n">output</span> <span class="o">=</span> <span class="n">output</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
-		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">purpose</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
-			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">purpose</span><span class="p">;</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KeyType</span><span class="p">.</span><span class="na">language</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getKey</span><span class="p">()))</span> <span class="p">{</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="k">this</span><span class="p">.</span><span class="na">language</span><span class="p">;</span>
 		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-			<span class="n">output</span> <span class="o">+=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">purpose</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="p">;</span>
+			<span class="n">output</span> <span class="o">+=</span> <span class="kd">super</span><span class="p">.</span><span class="na">getType</span><span class="p">()</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">language</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="p">;</span>
 		<span class="p">}</span>
 		<span class="k">return</span> <span class="n">output</span><span class="p">;</span>
 		
