@@ -855,9 +855,9 @@ I don't like pigs for pets
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">Integer</span> <span class="n">val</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
             <span class="kt">long</span> <span class="n">time</span> <span class="o">=</span> <span class="n">mapLookup</span><span class="p">(</span><span class="n">map</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Time taken for map lookup is "</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">" milliseconds"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Time taken for map lookup is "</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">" ms"</span><span class="p">);</span>
             <span class="n">time</span> <span class="o">=</span> <span class="n">binarySearch</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Time taken for binary search is "</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">" milliseconds"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Time taken for binary search is "</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">" ms"</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
@@ -1025,11 +1025,14 @@ Time taken for binary search is 0 milliseconds
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="c1">// insertion sort with input array</span>
+    <span class="c1">// insertion sort</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">insertionSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">array</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="kt">int</span> <span class="n">current</span> <span class="o">=</span> <span class="n">array</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
             <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        
+            <span class="c1">//insertion sort of the inputted array</span>
+
             <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">current</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
                 <span class="n">array</span><span class="o">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">array</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
                 <span class="n">j</span><span class="o">--</span><span class="p">;</span>
@@ -1038,18 +1041,21 @@ Time taken for binary search is 0 milliseconds
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="c1">// create main method and call all the methods on the random array and then print the time taken and then do this for 12 times. When listing out make it in a table format. Also list out the average time for each</span>
+    <span class="c1">// create main method and call all the methods on the random array </span>
+
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">int</span><span class="o">[]</span> <span class="n">average_times</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3600</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="n">randomArray</span><span class="p">();</span>
+
+    <span class="c1">// 12 iterations of the function</span>
 
             <span class="kt">long</span> <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
             <span class="n">bubbleSort</span><span class="p">(</span><span class="n">array</span><span class="p">);</span>
             <span class="kt">long</span> <span class="n">endTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
             <span class="kt">long</span> <span class="n">time</span> <span class="o">=</span> <span class="n">endTime</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">;</span>
             <span class="n">average_times</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+=</span> <span class="n">time</span><span class="p">;</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"bubble sort duration"</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">" milliseconds"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"bubble sort duration"</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">" ms"</span><span class="p">);</span>
 
             <span class="n">array</span> <span class="o">=</span> <span class="n">randomArray</span><span class="p">();</span>
             <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
@@ -1057,7 +1063,7 @@ Time taken for binary search is 0 milliseconds
             <span class="n">endTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
             <span class="n">time</span> <span class="o">=</span> <span class="n">endTime</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">;</span>
             <span class="n">average_times</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">+=</span> <span class="n">time</span><span class="p">;</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"selection sort duration "</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">" milliseconds"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"selection sort duration "</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">" ms"</span><span class="p">);</span>
 
             <span class="n">array</span> <span class="o">=</span> <span class="n">randomArray</span><span class="p">();</span>
             <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
@@ -1065,7 +1071,7 @@ Time taken for binary search is 0 milliseconds
             <span class="n">endTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
             <span class="n">time</span> <span class="o">=</span> <span class="n">endTime</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">;</span>
             <span class="n">average_times</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">+=</span> <span class="n">time</span><span class="p">;</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"merge sort duration "</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">" milliseconds"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"merge sort duration "</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">" ms"</span><span class="p">);</span>
 
             <span class="n">array</span> <span class="o">=</span> <span class="n">randomArray</span><span class="p">();</span>
             <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
@@ -1073,12 +1079,12 @@ Time taken for binary search is 0 milliseconds
             <span class="n">endTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">();</span>
             <span class="n">time</span> <span class="o">=</span> <span class="n">endTime</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">;</span>
             <span class="n">average_times</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">+=</span> <span class="n">time</span><span class="p">;</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"insertion sort duration: "</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">" milliseconds"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"insertion sort duration: "</span> <span class="o">+</span> <span class="n">time</span> <span class="o">+</span> <span class="s">" ms"</span><span class="p">);</span>
         <span class="p">}</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average time taken for bubble sort is "</span> <span class="o">+</span> <span class="n">average_times</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">/</span> <span class="mi">12</span> <span class="o">+</span> <span class="s">" milliseconds"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average time taken for selection sort is "</span> <span class="o">+</span> <span class="n">average_times</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">/</span> <span class="mi">12</span> <span class="o">+</span> <span class="s">" milliseconds"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average time taken for merge sort is "</span> <span class="o">+</span> <span class="n">average_times</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">/</span> <span class="mi">12</span> <span class="o">+</span> <span class="s">" milliseconds"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average time taken for insertion sort is "</span> <span class="o">+</span> <span class="n">average_times</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">/</span> <span class="mi">12</span> <span class="o">+</span> <span class="s">" milliseconds"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average time taken for bubble sort is "</span> <span class="o">+</span> <span class="n">average_times</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">/</span> <span class="mi">12</span> <span class="o">+</span> <span class="s">" ms"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average time taken for selection sort is "</span> <span class="o">+</span> <span class="n">average_times</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">/</span> <span class="mi">12</span> <span class="o">+</span> <span class="s">" ms"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average time taken for merge sort is "</span> <span class="o">+</span> <span class="n">average_times</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">/</span> <span class="mi">12</span> <span class="o">+</span> <span class="s">" ms"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average time taken for insertion sort is "</span> <span class="o">+</span> <span class="n">average_times</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span> <span class="o">/</span> <span class="mi">12</span> <span class="o">+</span> <span class="s">" ms"</span><span class="p">);</span>
         
     <span class="p">}</span> 
 <span class="p">}</span>
